@@ -16,7 +16,8 @@ Android Engineer Interview Questions
  - How does Garbage collection works?
  - What is a dangling pointer?
  - Elaborate Memory Leak?
- - 
+ - Explain fragment Lifecycle when it comes to ViewPager and sliding between different fragments.
+ - Difference between FragmentStateAdapter and FragmentStatePagerAdapter.
 
 ### Lifecycle
  - How to keep a video maintain playing state when we rotate screen?

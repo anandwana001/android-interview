@@ -10,6 +10,7 @@ Android Engineer Interview Questions
 - What are different Coroutine Scope?
 - How to manage series and parallel execution?
 - Difference between Flow/SharedFlow/StateFlow and elaborate it.
+- What happens if we call `.cancel()` from a coroutine scope?
 - 
 
 ## Android
@@ -18,6 +19,7 @@ Android Engineer Interview Questions
  - Elaborate Memory Leak?
  - Explain fragment Lifecycle when it comes to ViewPager and sliding between different fragments.
  - Difference between FragmentStateAdapter and FragmentStatePagerAdapter.
+ - 
 
 ### Lifecycle
  - How to keep a video maintain playing state when we rotate screen?
@@ -34,6 +36,7 @@ Android Engineer Interview Questions
  - When is onActivityResult called?
  - What does setRetainInstance do and how you can avoid it?
  - What callbacks trigger when a Dialog opens up? Conside both case, dialog attached from same activity/fragment and other activity/fragment.
+ - What does `launchWhenCreated`, `launchWhenStarted`, and `launchWhenResumed` functions do?
  - 
 
 ### Networking
@@ -48,6 +51,11 @@ Android Engineer Interview Questions
 - What is Circular dependency in dagger?, and how to resolve it
 - What's interesting about Hilt?
 - Did you use Koin? What are your thoughts on it?
+- 
+
+### Android Compose
+- How to launch coroutine from a composable function? - [LaunchedEffect](https://www.droidcon.com/2021/10/28/jetpack-compose-side-effects-ii-remembercoroutinescope/)
+- How to launch coroutine from a non-composable function, but tied to composition? - [rememberCoroutineScope()](https://www.droidcon.com/2021/10/28/jetpack-compose-side-effects-ii-remembercoroutinescope/)
 - 
 
 ## System Design

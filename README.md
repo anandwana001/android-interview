@@ -56,6 +56,8 @@ Android Engineer Interview Questions
 ### Android Compose
 - How to launch coroutine from a composable function? - [LaunchedEffect](https://www.droidcon.com/2021/10/28/jetpack-compose-side-effects-ii-remembercoroutinescope/)
 - How to launch coroutine from a non-composable function, but tied to composition? - [rememberCoroutineScope()](https://www.droidcon.com/2021/10/28/jetpack-compose-side-effects-ii-remembercoroutinescope/)
+- What is recomposition? [Recomposition](https://developer.android.com/jetpack/compose/mental-model#recomposition)
+- Why and when to use `remember {}`?
 - 
 
 ## System Design

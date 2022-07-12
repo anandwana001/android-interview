@@ -60,7 +60,7 @@ Android Engineer Interview Questions
 - Why and when to use `remember {}`?
 - Difference between `LazyColumn` and `RecyclerView`?
 - What is AndroidView in compose?
-- What is the lifecycle of composeables?
+- What is the lifecycle of composeables? [Lifecycle](https://developer.android.com/jetpack/compose/lifecycle)
 - How to avoid recomposition of any composable, if the state is not changed? [Smart Recomposition](https://developer.android.com/jetpack/compose/lifecycle#add-info-smart-recomposition)
 - What are stable types which can skip recomposition?
 - 

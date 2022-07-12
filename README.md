@@ -58,7 +58,13 @@ Android Engineer Interview Questions
 - How to launch coroutine from a non-composable function, but tied to composition? - [rememberCoroutineScope()](https://www.droidcon.com/2021/10/28/jetpack-compose-side-effects-ii-remembercoroutinescope/)
 - What is recomposition? [Recomposition](https://developer.android.com/jetpack/compose/mental-model#recomposition)
 - Why and when to use `remember {}`?
+- Difference between `LazyColumn` and `RecyclerView`?
+- What is AndroidView in compose?
+- What is the lifecycle of composeables?
+- How to avoid recomposition of any composable, if the state is not changed? [Smart Recomposition](https://developer.android.com/jetpack/compose/lifecycle#add-info-smart-recomposition)
+- What are stable types which can skip recomposition?
 - 
+
 
 ## System Design
  - Design Image Loading Library

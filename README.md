@@ -63,6 +63,10 @@ Android Engineer Interview Questions
 - What is the lifecycle of composeables? [Lifecycle](https://developer.android.com/jetpack/compose/lifecycle)
 - How to avoid recomposition of any composable, if the state is not changed? [Smart Recomposition](https://developer.android.com/jetpack/compose/lifecycle#add-info-smart-recomposition)
 - What are stable types which can skip recomposition?
+- What is State?
+- What is MutableState and how does recomposition happens?
+- How to retain State accross recomposition and configuration changes?
+- Difference between Stateless and Statefull composeables?
 - 
 
 

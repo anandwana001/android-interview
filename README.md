@@ -16,10 +16,24 @@ Android Engineer Interview Questions
 ## Android
  - How does Garbage collection works?
  - What is a dangling pointer?
+ - Explain the terms reference counting, mark and sweep? 
  - Elaborate Memory Leak?
  - Explain fragment Lifecycle when it comes to ViewPager and sliding between different fragments.
  - Difference between FragmentStateAdapter and FragmentStatePagerAdapter.
- - 
+ - Difference between Serializable and Parcelable? What are the disadvantages of Serializable?
+ - How you could implement observable SharedPrefs or observable Databases i.e. Observe a certain key/table/query?
+ - How does layout inflation work from xml tags to view reference in memory?
+ - How would you go about implementing findViewById? Given 2 view references, how would you go about finding their ancestor view?
+   https://obvious.in/blog/deflating-the-layoutinflater-working-with-findviewbyid
+ - What is a thread, handler, looper and message queue?
+ - What are the different methods of concurrency on Android? Can you explain the difference between ExecutorService vs CachedThreadPool vs FixedThreadPool vs AsyncTasks vs HandlerThreads?
+ - How does ViewModel instance is provided to Activity, Fragment. How does ViewModelProviderStore decide when to retain the instance?
+  Ans : It uses <Key,Value> to hold onto viewmodel instance, these are removed when ViewModelStore#clear is called. 
+  Tip : Look at the accessor of this method to understand how it is retain across configuration changes
+ - How do you inspect and solve Jank issue? [here](https://developer.android.com/studio/profile/jank-detection)
+ -
+   
+
 
 ### Lifecycle
  - How to keep a video maintain playing state when we rotate screen?
@@ -40,8 +54,13 @@ Android Engineer Interview Questions
  - 
 
 ### Networking
-- What is the role of OkHttp and Retroifit?
-- What design pattern is Retroifit?
+- What is the role of OkHttp and Retrofit?
+- What design pattern does Retrofit use?
+- How would optimise handling of access token expiration? How would you handle retry network call when the api fails? (Custom Interceptor response)
+- 
+
+### Webview
+- What are the problems around security when dealing with webviews.
 - 
 
 ### Dependency Injection
@@ -74,6 +93,7 @@ Android Engineer Interview Questions
  - Design Image Loading Library
  - Design Image Downloading Library
  - Design LRU Cache
+ - Design real time twitter timeline. How will you structure the backend. Will you use websocket or REST for this usecase? Justify. 
  - 
 
 ## Common Question

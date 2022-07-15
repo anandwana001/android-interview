@@ -26,7 +26,7 @@ Android Engineer Interview Questions
  - How would you go about implementing findViewById? Given 2 view references, how would you go about finding their ancestor view? Article](https://obvious.in/blog/deflating-the-layoutinflater-working-with-findviewbyid)
  - What is a Thread, Handler, Looper and Message Queue?
  - What are the different methods of concurrency on Android? Can you explain the difference between ExecutorService vs CachedThreadPool vs FixedThreadPool vs AsyncTasks vs HandlerThreads?
- - How does ViewModel instance is provided to Activity, Fragment. How does ViewModelProviderStore decide when to retain the instance?
+ - How does `ViewModel` instance provided to Activity and Fragment. How does `ViewModelProviderStore` decide when to retain the instance?
   Ans : It uses <Key,Value> to hold onto viewmodel instance, these are removed when ViewModelStore#clear is called. 
   Tip : Look at the accessor of this method to understand how it is retain across configuration changes
  - How do you inspect and solve Jank issue? [here](https://developer.android.com/studio/profile/jank-detection)

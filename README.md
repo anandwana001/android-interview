@@ -23,8 +23,7 @@ Android Engineer Interview Questions
  - Difference between Serializable and Parcelable? What are the disadvantages of Serializable?
  - How you could implement observable SharedPrefs or observable Databases i.e. Observe a certain key/table/query?
  - How does layout inflation work from xml tags to view reference in memory?
- - How would you go about implementing findViewById? Given 2 view references, how would you go about finding their ancestor view?
-   https://obvious.in/blog/deflating-the-layoutinflater-working-with-findviewbyid
+ - How would you go about implementing findViewById? Given 2 view references, how would you go about finding their ancestor view? Article](https://obvious.in/blog/deflating-the-layoutinflater-working-with-findviewbyid)
  - What is a thread, handler, looper and message queue?
  - What are the different methods of concurrency on Android? Can you explain the difference between ExecutorService vs CachedThreadPool vs FixedThreadPool vs AsyncTasks vs HandlerThreads?
  - How does ViewModel instance is provided to Activity, Fragment. How does ViewModelProviderStore decide when to retain the instance?

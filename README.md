@@ -93,7 +93,7 @@ Android Engineer Interview Questions
  - Design Image Loading Library
  - Design Image Downloading Library
  - Design LRU Cache
- - Design real time twitter timeline. How will you structure the backend. Will you use websocket or REST for this usecase? Justify. 
+ - Design a real-time Twitter feed timeline. How will you structure the backend? Will you use WebSocket or REST for this use case? Justify. 
  - 
 
 ## Common Question

@@ -19,8 +19,15 @@ Android Engineer Interview Questions
  - Elaborate Memory Leak?
  - Explain fragment Lifecycle when it comes to ViewPager and sliding between different fragments.
  - Difference between FragmentStateAdapter and FragmentStatePagerAdapter.
- - 
-
+ - Difference between Serializable and Parcelable? What are the disadvantages of Serializable?
+ - How you could implement observable SharedPrefs or observable Databases i.e. Observe a certain key/table/query?
+ - How does layout inflation work from xml tags to view reference in memory?
+ - What is a Thread, Handler, Looper and Message Queue?
+ - What are the different methods of concurrency on Android? Can you explain the difference between ExecutorService vs CachedThreadPool vs FixedThreadPool vs AsyncTasks vs HandlerThreads?
+ - How does `ViewModel` instance provided to Activity and Fragment. How does `ViewModelProviderStore` decide when to retain the instance?
+ - How do you inspect and solve Jank issue? [here](https://developer.android.com/studio/profile/jank-detection)
+ -
+  
 ### Lifecycle
  - How to keep a video maintain playing state when we rotate screen?
  - How many callbacks in Fragmnets?
@@ -40,8 +47,13 @@ Android Engineer Interview Questions
  - 
 
 ### Networking
-- What is the role of OkHttp and Retroifit?
-- What design pattern is Retroifit?
+- What is the role of OkHttp and Retrofit?
+- What design pattern does Retrofit use?
+- How would optimise handling of access token expiration? How would you handle retry network call when the api fails? (Custom Interceptor response)
+- 
+
+### Webview
+- What are the problems around security when dealing with `WebView`.
 - 
 
 ### Dependency Injection
@@ -74,6 +86,7 @@ Android Engineer Interview Questions
  - Design Image Loading Library
  - Design Image Downloading Library
  - Design LRU Cache
+ - Design a real-time Twitter feed timeline. How will you structure the backend? Will you use WebSocket or REST for this use case? Justify. 
  - 
 
 ## Common Question

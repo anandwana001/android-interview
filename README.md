@@ -79,6 +79,7 @@ Android Engineer Interview Questions
 - What is MutableState and how does recomposition happens?
 - How to retain State accross recomposition and configuration changes?
 - Difference between Stateless and Statefull composeables?
+- What are your thoughts on flat heirarchy, constraint Layout in compose vs the older view heirarchy in xml
 - 
 
 

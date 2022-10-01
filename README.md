@@ -80,7 +80,7 @@ Android Engineer Interview Questions
 - How to retain State accross recomposition and configuration changes?
 - Difference between Stateless and Statefull composeables?
 - What are your thoughts on flat heirarchy, constraint Layout in compose vs the older view heirarchy in xml
-- 
+- Difference b/w remember and LaunchedEffect
 
 
 ## System Design

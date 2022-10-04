@@ -92,7 +92,8 @@ Android Engineer Interview Questions
 
 ## Common Question
  - `String` vs `StringBuilder`
- - 
+ - `==` vs `.equals`?
+ - `===` vs `==`?
 
 ## Contributing Guidelines
 What interesting questions you had faced while giving interview for Android Engineer role (any level)? Let's open a PR.

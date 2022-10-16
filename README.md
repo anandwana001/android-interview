@@ -11,7 +11,7 @@ Android Engineer Interview Questions
 - How to manage series and parallel execution?
 - Difference between Flow/SharedFlow/StateFlow and elaborate it.
 - What happens if we call `.cancel()` from a coroutine scope?
-- 
+- What is the difference between Launch and Async in Kotlin Coroutines?
 
 ## Android
  - How does Garbage collection works?
@@ -26,7 +26,10 @@ Android Engineer Interview Questions
  - What are the different methods of concurrency on Android? Can you explain the difference between ExecutorService vs CachedThreadPool vs FixedThreadPool vs AsyncTasks vs HandlerThreads?
  - How does `ViewModel` instance provided to Activity and Fragment. How does `ViewModelProviderStore` decide when to retain the instance?
  - How do you inspect and solve Jank issue? [here](https://developer.android.com/studio/profile/jank-detection)
- -
+ - What are the different tools available in Android development? Explain their functions?
+ - List the various storages that are provided by Android.
+ - What are the different software components of Android Jetpack?
+ - 
   
 ### Lifecycle
  - How to keep a video maintain playing state when we rotate screen?
@@ -44,7 +47,7 @@ Android Engineer Interview Questions
  - What does setRetainInstance do and how you can avoid it?
  - What callbacks trigger when a Dialog opens up? Conside both case, dialog attached from same activity/fragment and other activity/fragment.
  - What does `launchWhenCreated`, `launchWhenStarted`, and `launchWhenResumed` functions do?
- - 
+ - What are ‘activities’? Describe the lifecycle of an activity.
 
 ### Networking
 - What is the role of OkHttp and Retrofit?

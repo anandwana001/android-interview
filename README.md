@@ -82,7 +82,8 @@ Android Engineer Interview Questions
 - What are your thoughts on flat heirarchy, constraint Layout in compose vs the older view heirarchy in xml
 - Difference b/w remember and LaunchedEffect
 - Does re-composition of `ComposeItem1` bring any affect on `ComposeItem2`? If yes, then how? 
-  - `ComposeParent() { ComposeItem1 {} ComposeItem2() {...} } ` 
+  - `ComposeParent() { ComposeItem1 {} ComposeItem2() {...} } `
+  - What is `CompositionLocal`?
 
 
 ## System Design

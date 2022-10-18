@@ -112,7 +112,19 @@
  - Design LRU Cache
  - Design a real-time Twitter feed timeline. How will you structure the backend? Will you use WebSocket or REST for this use case? Justify. 
  - Design Networking Library
- - 
+ - Design components and overall architecture for a Search feature in an Android application. [Spotify | Android Engineer II | London, UK | Sep 2022]
+ - Design a Disk based Cache for client. [Spotify System Design Android/iOS Client]
+    ```
+    Platform independent 
+    Key will be 32 bytes
+    Value can be anything but in Byte array
+    Cache should be persistent
+    Cache should max hold 100k+ Objects
+    Cache Max size should be configurable ( Max Size : 10 MB upto 1GB)
+    Cache should be opaque
+    Cache should be Secure
+    ```
+  - 
 
 ## Common Question
  - `String` vs `StringBuilder`

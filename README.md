@@ -1,9 +1,20 @@
-# android-interview
+# Android Engineer Interview Questions
 
 ![Android](https://img.shields.io/badge/Android-3DDC84?style=for-the-badge&logo=android&logoColor=white)
 ![Kotlin](https://img.shields.io/badge/kotlin-%237F52FF.svg?style=for-the-badge&logo=kotlin&logoColor=white)
 
-Android Engineer Interview Questions
+## Contents
+
+* [Kotlin](#kotlin)
+* [Android](#android)
+* [Lifecycle](#lifecycle)
+* [Networking](#networking)
+* [Webview](#webview)
+* [Dependency Injection](#dependency-injection)
+* [Android Compose](#android-compose)
+* [System Design](#system-design)
+* [Common Question](#common-question)
+
 
 ## Kotlin
 - What is the difference between `const val` and `val`?
@@ -107,6 +118,8 @@ Android Engineer Interview Questions
  - `String` vs `StringBuilder`
  - `==` vs `.equals`?
  - `===` vs `==`?
+
+------
 
 ## Contributing Guidelines
 What interesting questions you had faced while giving interview for Android Engineer role (any level)? Let's open a PR.

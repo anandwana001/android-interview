@@ -132,6 +132,8 @@
  - `===` vs `==`?
  - To check if strings are rotations of each other or not. And if they are in rotation print the no. of rotations. [Paytm Interview]
  - Find the string is panagram or not [Paytm Interview]
+ - Minimum Meetroom scheduling [PhonePe]
+ - Anagram Strings based question [PhonePe]
 
 ------
 

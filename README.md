@@ -11,6 +11,9 @@ Android Engineer Interview Questions
 - How to manage series and parallel execution?
 - Difference between Flow/SharedFlow/StateFlow and elaborate it.
 - What happens if we call `.cancel()` from a coroutine scope?
+- What is an Init block in Kotlin?
+- How to choose between apply and with?
+- What is inline function in Kotlin?
 - 
 
 ## Android

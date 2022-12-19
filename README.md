@@ -28,6 +28,8 @@
 - What is an Init block in Kotlin?
 - How to choose between apply and with?
 - What is inline function in Kotlin?
+- How will you execute two apis in parallel? [coroutine.flow.zip](https://kotlinlang.org/api/kotlinx.coroutines/kotlinx-coroutines-core/kotlinx.coroutines.flow/zip.html) and [CoroutineScope.async](https://kotlinlang.org/api/kotlinx.coroutines/kotlinx-coroutines-core/kotlinx.coroutines/async.html)
+- Flow : FlatMapConcat vs FlatMapMerge vs FlatMapLatest
 - 
 
 ## Android
@@ -46,7 +48,12 @@
  - How does the OutOfMemory happens? 
  - How do you find memory leaks in Android applications?
  - What is Doze? What about App Standby? 
+ - How would you create a custom [live data](https://android.googlesource.com/platform/frameworks/support/+/a9ac247af2afd4115c3eb6d16c05bc92737d6305/lifecycle/livedata-core/src/main/java/androidx/lifecycle/LiveData.java) from scratch? It should take care about the following points 
+     - How will you take care of different lifecycle owners listening to this live data?
+     - Handling multiple observers. Notify only to observer associated with active lifecycle owner
+     - Difference between setValue and postValue? 
  - 
+
   
 ### Lifecycle
  - How to keep a video maintain playing state when we rotate screen?

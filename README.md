@@ -43,7 +43,7 @@
  - How does layout inflation work from xml tags to view reference in memory?
  - What is a Thread, Handler, Looper and Message Queue?
  - What are the different methods of concurrency on Android? Can you explain the difference between ExecutorService vs CachedThreadPool vs FixedThreadPool vs AsyncTasks vs HandlerThreads?
- - How does `ViewModel` instance provided to Activity and Fragment. How does `ViewModelProviderStore` decide when to retain the instance?
+ - How does `ViewModel` instance are provided to Activity and Fragment. How does `ViewModelProviderStore` decide when to retain the instance?
  - How do you inspect and solve Jank issue? [here](https://developer.android.com/studio/profile/jank-detection)
  - How does the OutOfMemory happens? 
  - How do you find memory leaks in Android applications?

@@ -12,8 +12,10 @@
 * [Webview](#webview)
 * [Dependency Injection](#dependency-injection)
 * [Android Compose](#android-compose)
+* [Architecture](#architecture)
 * [System Design](#system-design)
 * [Common Question](#common-question)
+* [Questions from Company](#questions-from-company)
 
 
 ## Kotlin
@@ -46,7 +48,8 @@
  - How does the OutOfMemory happens? 
  - How do you find memory leaks in Android applications?
  - What is Doze? What about App Standby? 
- - 
+ - What does `setContentView` do?
+ 
   
 ### Lifecycle
  - How to keep a video maintain playing state when we rotate screen?
@@ -74,6 +77,7 @@
 
 ### Webview
 - What are the problems around security when dealing with `WebView`.
+- How to interact or make connections with JavaScript?
 - 
 
 ### Dependency Injection
@@ -105,6 +109,11 @@
   - `ComposeParent() { ComposeItem1 {} ComposeItem2() {...} } `
   - What is `CompositionLocal`?
 
+## Architecture
+ - What is SOLID principles?
+ - What is MVVM?
+ - Brief about Android Architecture.
+ - 
 
 ## System Design
  - Design Image Loading Library
@@ -130,6 +139,10 @@
  - `String` vs `StringBuilder`
  - `==` vs `.equals`?
  - `===` vs `==`?
+ - Java OOP concepts
+ - 
+ 
+## Questions from Company
  - To check if strings are rotations of each other or not. And if they are in rotation print the no. of rotations. [Paytm Interview]
  - Find the string is panagram or not [Paytm Interview]
  - Minimum Meetroom scheduling [PhonePe]

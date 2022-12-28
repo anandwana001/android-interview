@@ -15,6 +15,7 @@
 * [Thread](#thread)
 * [Architecture](#architecture)
 * [System Design](#system-design)
+* [Libraries](#libraries)
 * [Common Question](#common-question)
 * [Questions from Company](#questions-from-company)
 
@@ -51,6 +52,8 @@
  - What is Doze? What about App Standby? 
  - What does `setContentView` do?
  - Process of creating a custom view
+ - Deeplink understanding and architecture
+ - Notifications
  - 
  
   
@@ -146,8 +149,18 @@
     Cache should be opaque
     Cache should be Secure
     ```
- - How Glide internally works?
+ - Design Checkout Screen
+ - Design Error handling Structure
+ - REST <-> Web Sockets
+ - Implement caching mechanism
  - 
+ 
+## Libraries
+ - How Glide internally works?
+ - Hoe does retrofit workss internally?
+ - ViewModel internal working
+ - 
+ 
 
 ## Common Question
  - `String` vs `StringBuilder`

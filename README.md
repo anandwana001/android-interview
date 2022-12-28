@@ -12,6 +12,7 @@
 * [Webview](#webview)
 * [Dependency Injection](#dependency-injection)
 * [Android Compose](#android-compose)
+* [Thread](#thread)
 * [Architecture](#architecture)
 * [System Design](#system-design)
 * [Common Question](#common-question)
@@ -49,6 +50,8 @@
  - How do you find memory leaks in Android applications?
  - What is Doze? What about App Standby? 
  - What does `setContentView` do?
+ - Process of creating a custom view
+ - 
  
   
 ### Lifecycle
@@ -108,7 +111,17 @@
 - Does re-composition of `ComposeItem1` bring any affect on `ComposeItem2`? If yes, then how? 
   - `ComposeParent() { ComposeItem1 {} ComposeItem2() {...} } `
   - What is `CompositionLocal`?
+- Custom views in compose
+- Canvas in Compose
+- 
 
+## Thread
+ - Different type of threads?
+ - Difference between different type of thread?
+ - Thread <-> Handler <-> looper
+ - UI vs Background Thread
+ - 
+ 
 ## Architecture
  - What is SOLID principles?
  - What is MVVM?
@@ -133,7 +146,8 @@
     Cache should be opaque
     Cache should be Secure
     ```
-  - 
+ - How Glide internally works?
+ - 
 
 ## Common Question
  - `String` vs `StringBuilder`
@@ -147,6 +161,20 @@
  - Find the string is panagram or not [Paytm Interview]
  - Minimum Meetroom scheduling [PhonePe]
  - Anagram Strings based question [PhonePe]
+ - Implement findViewById method [Booking.com]
+ - Given a list of words as input, output another list of strings, each containing words that are mutual anagrams [Booking.com]
+ - Identify whether four sides (given by four integers) can form a square, a rectangle or neither [Booking.com]
+ - Output a delta encoding for the sequence. In a delta encoding, the first element is reproduced as-is. Each subsequent element is represented as the numeric difference from the element before it [Booking.com]
+ - Three integer arrays are given with duplicate numbers. Find the common elements among three arrays [Booking.com]
+ - Twisted question related to ConcurrentModificationException in an ArrayList [Booking.com]
+ - How do you implement a hotel list and detail screen. Discuss what all APIs You will create how the layout will be [Booking.com]
+ - Fragments & their lifecycle, Activity lifecycle, Views, Layouts [Booking.com]
+ - Background task in Android - Asynctask, service, intent services etc [Booking.com]
+ - Given dates and number of check-in and check-out on those dates. Find the busiest day of the hotel. [Merge Array interval type question] [Booking.com]
+ - given an array, determine if there are repeated elements. If an element is repeated more than 3 times, return those elements. This question is basically doing a hash and checking if the hash already exists. Someone used a Map and a Set. [Booking.com]
+ - Given an list of positive words, negative words and a review, determine if the review is flagged as positive, negative or neutral. Someone solved it using a Set. Someone just needed to do some count (+ or -) regarding on where the word appeard (positive list or negative). [Booking.com]
+ - 
+
 
 ------
 

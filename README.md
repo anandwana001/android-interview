@@ -12,8 +12,12 @@
 * [Webview](#webview)
 * [Dependency Injection](#dependency-injection)
 * [Android Compose](#android-compose)
+* [Thread](#thread)
+* [Architecture](#architecture)
 * [System Design](#system-design)
+* [Libraries](#libraries)
 * [Common Question](#common-question)
+* [Questions from Company](#questions-from-company)
 
 
 ## Kotlin
@@ -53,7 +57,12 @@
      - Handling multiple observers. Notify only to observer associated with active lifecycle owner
      - Difference between setValue and postValue? 
  - 
-
+ - What does `setContentView` do?
+ - Process of creating a custom view
+ - Deeplink understanding and architecture
+ - Notifications
+ - 
+ 
   
 ### Lifecycle
  - How to keep a video maintain playing state when we rotate screen?
@@ -81,6 +90,7 @@
 
 ### Webview
 - What are the problems around security when dealing with `WebView`.
+- How to interact or make connections with JavaScript?
 - 
 
 ### Dependency Injection
@@ -111,7 +121,22 @@
 - Does re-composition of `ComposeItem1` bring any affect on `ComposeItem2`? If yes, then how? 
   - `ComposeParent() { ComposeItem1 {} ComposeItem2() {...} } `
   - What is `CompositionLocal`?
+- Custom views in compose
+- Canvas in Compose
+- 
 
+## Thread
+ - Different type of threads?
+ - Difference between different type of thread?
+ - Thread <-> Handler <-> looper
+ - UI vs Background Thread
+ - 
+ 
+## Architecture
+ - What is SOLID principles?
+ - What is MVVM?
+ - Brief about Android Architecture.
+ - 
 
 ## System Design
  - Design Image Loading Library
@@ -131,16 +156,45 @@
     Cache should be opaque
     Cache should be Secure
     ```
-  - 
+ - Design Checkout Screen
+ - Design Error handling Structure
+ - REST <-> Web Sockets
+ - Implement caching mechanism
+ - 
+ 
+## Libraries
+ - How Glide internally works?
+ - Hoe does retrofit workss internally?
+ - ViewModel internal working
+ - 
+ 
 
 ## Common Question
  - `String` vs `StringBuilder`
  - `==` vs `.equals`?
  - `===` vs `==`?
+ - Java OOP concepts
+ - 
+ 
+## Questions from Company
  - To check if strings are rotations of each other or not. And if they are in rotation print the no. of rotations. [Paytm Interview]
  - Find the string is panagram or not [Paytm Interview]
  - Minimum Meetroom scheduling [PhonePe]
  - Anagram Strings based question [PhonePe]
+ - Implement findViewById method [Booking.com]
+ - Given a list of words as input, output another list of strings, each containing words that are mutual anagrams [Booking.com]
+ - Identify whether four sides (given by four integers) can form a square, a rectangle or neither [Booking.com]
+ - Output a delta encoding for the sequence. In a delta encoding, the first element is reproduced as-is. Each subsequent element is represented as the numeric difference from the element before it [Booking.com]
+ - Three integer arrays are given with duplicate numbers. Find the common elements among three arrays [Booking.com]
+ - Twisted question related to ConcurrentModificationException in an ArrayList [Booking.com]
+ - How do you implement a hotel list and detail screen. Discuss what all APIs You will create how the layout will be [Booking.com]
+ - Fragments & their lifecycle, Activity lifecycle, Views, Layouts [Booking.com]
+ - Background task in Android - Asynctask, service, intent services etc [Booking.com]
+ - Given dates and number of check-in and check-out on those dates. Find the busiest day of the hotel. [Merge Array interval type question] [Booking.com]
+ - given an array, determine if there are repeated elements. If an element is repeated more than 3 times, return those elements. This question is basically doing a hash and checking if the hash already exists. Someone used a Map and a Set. [Booking.com]
+ - Given an list of positive words, negative words and a review, determine if the review is flagged as positive, negative or neutral. Someone solved it using a Set. Someone just needed to do some count (+ or -) regarding on where the word appeard (positive list or negative). [Booking.com]
+ - 
+
 
 ------
 

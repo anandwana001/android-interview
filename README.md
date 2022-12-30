@@ -136,6 +136,7 @@
  - What is SOLID principles?
  - What is MVVM?
  - Brief about Android Architecture.
+ - Pros of using modular approach [reference](https://jeroenmols.com/blog/2019/03/06/modularizationwhy/#why)
  - 
 
 ## System Design

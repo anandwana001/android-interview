@@ -11,7 +11,7 @@
 * [Networking](#networking)
 * [Webview](#webview)
 * [Dependency Injection](#dependency-injection)
-* [Android Compose](#android-compose)
+* [Jetpack Compose](#jetpack-compose)
 * [Thread](#thread)
 * [Architecture](#architecture)
 * [System Design](#system-design)
@@ -95,7 +95,7 @@
 - Did you use Koin? What are your thoughts on it?
 - 
 
-### Android Compose
+### Jetpack Compose
 - How to launch coroutine from a composable function? - [LaunchedEffect](https://www.droidcon.com/2021/10/28/jetpack-compose-side-effects-ii-remembercoroutinescope/)
 - How to launch coroutine from a non-composable function, but tied to composition? - [rememberCoroutineScope()](https://www.droidcon.com/2021/10/28/jetpack-compose-side-effects-ii-remembercoroutinescope/)
 - What is recomposition? [Recomposition](https://developer.android.com/jetpack/compose/mental-model#recomposition)

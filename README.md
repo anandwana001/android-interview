@@ -99,6 +99,11 @@
 - How to launch coroutine from a composable function? - [LaunchedEffect](https://www.droidcon.com/2021/10/28/jetpack-compose-side-effects-ii-remembercoroutinescope/)
 - How to launch coroutine from a non-composable function, but tied to composition? - [rememberCoroutineScope()](https://www.droidcon.com/2021/10/28/jetpack-compose-side-effects-ii-remembercoroutinescope/)
 - What is recomposition? [Recomposition](https://developer.android.com/jetpack/compose/mental-model#recomposition)
+- **What is `remember` in compose?**
+  - A composable function to remember the value produced by a calculation only at the time of composition. It will not calculate again in recomposition.
+  - Recomposition will always return the value produced by composition.
+  - Whole Compose is based on concept of `Positional Memoization`
+  - At the time of recomosition, `remember` internally calls a function called `rememberedValue()` whose work is to look into the `slotTable` and compare if the previous value and the new value has any difference, if not return, else update value
 - Why and when to use `remember {}`?
 - Difference between `LazyColumn` and `RecyclerView`?
 - What is AndroidView in compose?

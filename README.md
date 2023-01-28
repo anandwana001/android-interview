@@ -11,7 +11,7 @@
 * [Networking](#networking)
 * [Webview](#webview)
 * [Dependency Injection](#dependency-injection)
-* [Android Compose](#android-compose)
+* [Jetpack Compose](#jetpack-compose)
 * [Thread](#thread)
 * [Architecture](#architecture)
 * [System Design](#system-design)
@@ -102,10 +102,15 @@
 - Did you use Koin? What are your thoughts on it?
 - 
 
-### Android Compose
+### Jetpack Compose
 - How to launch coroutine from a composable function? - [LaunchedEffect](https://www.droidcon.com/2021/10/28/jetpack-compose-side-effects-ii-remembercoroutinescope/)
 - How to launch coroutine from a non-composable function, but tied to composition? - [rememberCoroutineScope()](https://www.droidcon.com/2021/10/28/jetpack-compose-side-effects-ii-remembercoroutinescope/)
 - What is recomposition? [Recomposition](https://developer.android.com/jetpack/compose/mental-model#recomposition)
+- **What is `remember` in compose?**
+  - A composable function to remember the value produced by a calculation only at the time of composition. It will not calculate again in recomposition.
+  - Recomposition will always return the value produced by composition.
+  - Whole Compose is based on concept of `Positional Memoization`
+  - At the time of recomosition, `remember` internally calls a function called `rememberedValue()` whose work is to look into the `slotTable` and compare if the previous value and the new value has any difference, if not return, else update value
 - Why and when to use `remember {}`?
 - Difference between `LazyColumn` and `RecyclerView`?
 - What is AndroidView in compose?
@@ -145,18 +150,6 @@
  - Design LRU Cache
  - Design a real-time Twitter feed timeline. How will you structure the backend? Will you use WebSocket or REST for this use case? Justify. 
  - Design Networking Library
- - Design components and overall architecture for a Search feature in an Android application. [Spotify | Android Engineer II | London, UK | Sep 2022]
- - Design a Disk based Cache for client. [Spotify System Design Android/iOS Client]
-    ```
-    Platform independent 
-    Key will be 32 bytes
-    Value can be anything but in Byte array
-    Cache should be persistent
-    Cache should max hold 100k+ Objects
-    Cache Max size should be configurable ( Max Size : 10 MB upto 1GB)
-    Cache should be opaque
-    Cache should be Secure
-    ```
  - Design Checkout Screen
  - Design Error handling Structure
  - REST <-> Web Sockets
@@ -178,23 +171,13 @@
  - 
  
 ## Questions from Company
- - To check if strings are rotations of each other or not. And if they are in rotation print the no. of rotations. [Paytm Interview]
- - Find the string is panagram or not [Paytm Interview]
- - Minimum Meetroom scheduling [PhonePe]
- - Anagram Strings based question [PhonePe]
- - Implement findViewById method [Booking.com]
- - Given a list of words as input, output another list of strings, each containing words that are mutual anagrams [Booking.com]
- - Identify whether four sides (given by four integers) can form a square, a rectangle or neither [Booking.com]
- - Output a delta encoding for the sequence. In a delta encoding, the first element is reproduced as-is. Each subsequent element is represented as the numeric difference from the element before it [Booking.com]
- - Three integer arrays are given with duplicate numbers. Find the common elements among three arrays [Booking.com]
- - Twisted question related to ConcurrentModificationException in an ArrayList [Booking.com]
- - How do you implement a hotel list and detail screen. Discuss what all APIs You will create how the layout will be [Booking.com]
- - Fragments & their lifecycle, Activity lifecycle, Views, Layouts [Booking.com]
- - Background task in Android - Asynctask, service, intent services etc [Booking.com]
- - Given dates and number of check-in and check-out on those dates. Find the busiest day of the hotel. [Merge Array interval type question] [Booking.com]
- - given an array, determine if there are repeated elements. If an element is repeated more than 3 times, return those elements. This question is basically doing a hash and checking if the hash already exists. Someone used a Map and a Set. [Booking.com]
- - Given an list of positive words, negative words and a review, determine if the review is flagged as positive, negative or neutral. Someone solved it using a Set. Someone just needed to do some count (+ or -) regarding on where the word appeard (positive list or negative). [Booking.com]
- - 
+| Company | Questions |
+|  --- | --- |
+| Booking.com | <ul><li>Implement findViewById method</li> <li>Given a list of words as input, output another list of strings, each containing words that are mutual anagrams</li> <li>Identify whether four sides (given by four integers) can form a square, a rectangle or neither</li> <li>Output a delta encoding for the sequence. In a delta encoding, the first element is reproduced as-is. Each subsequent element is represented as the numeric difference from the element before it</li> <li>Three integer arrays are given with duplicate numbers. Find the common elements among three arrays</li> <li>Twisted question related to ConcurrentModificationException in an ArrayList</li> <li>How do you implement a hotel list and detail screen. Discuss what all APIs You will create how the layout will be </li> <li>Fragments & their lifecycle, Activity lifecycle, Views, Layouts </li> <li> Background task in Android - Asynctask, service, intent services etc </li> <li> Given dates and number of check-in and check-out on those dates. Find the busiest day of the hotel. [Merge Array interval type question]</li> <li> given an array, determine if there are repeated elements. If an element is repeated more than 3 times, return those elements. This question is basically doing a hash and checking if the hash already exists. Someone used a Map and a Set. </li> <li> Given an list of positive words, negative words and a review, determine if the review is flagged as positive, negative or neutral. Someone solved it using a Set. Someone just needed to do some count (+ or -) regarding on where the word appeard (positive list or negative). </li> </ul>| 
+| Spotify | <ul> <li> Design components and overall architecture for a Search feature in an Android application. [Spotify - Android Engineer II - London, UK - Sep 2022] </li> <li> Design a Disk based Cache for client. [Spotify System Design Android/iOS Client] `Platform independent, Key will be 32 bytes, Value can be anything but in Byte array, Cache should be persistent, Cache should max hold 100k+ Objects, Cache Max size should be configurable ( Max Size : 10 MB upto 1GB), Cache should be opaque, Cache should be Secure` </li> <li>[Linked List Cycle](https://leetcode.com/problems/linked-list-cycle/) </li> <li> [Palindrome Linked List](https://leetcode.com/problems/palindrome-linked-list/) </li></ul>|
+| PhonePe | <ul> <li> Minimum Meetroom scheduling </li> <li> Anagram Strings based question </li></ul> |
+| Paytm | <ul> <li> To check if strings are rotations of each other or not. And if they are in rotation print the no. of rotations. </li> <li> Find the string is panagram or not </li> <li>Design components and overall architecture for a Search feature in an Android application</li></ul> |
+| Meesho | <ul> <li> SOLID principles </li> <li> Dagger, why use dependency injection, what if we do not think it is important, like alternatives. How to create our own dependency injection library. </li> <li> why use MVVM over MVP, think outside the box, we could have used observables using RxJava etc. - open ended questions around it </li> <li> Multi Module benefits and why use it</li> <li> How to handle dependencies or abstraction in multi module </li> <li> val vs const </li> <li> inline keyword </li> <li> lateinit vs lazy </li> </ul>|
 
 
 ------

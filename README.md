@@ -32,6 +32,8 @@
 - What is an Init block in Kotlin?
 - How to choose between apply and with?
 - What is inline function in Kotlin?
+- How will you execute two apis in parallel? [coroutine.flow.zip](https://kotlinlang.org/api/kotlinx.coroutines/kotlinx-coroutines-core/kotlinx.coroutines.flow/zip.html) and [CoroutineScope.async](https://kotlinlang.org/api/kotlinx.coroutines/kotlinx-coroutines-core/kotlinx.coroutines/async.html)
+- Flow : FlatMapConcat vs FlatMapMerge vs FlatMapLatest
 - 
 
 ## Android
@@ -45,11 +47,16 @@
  - How does layout inflation work from xml tags to view reference in memory?
  - What is a Thread, Handler, Looper and Message Queue?
  - What are the different methods of concurrency on Android? Can you explain the difference between ExecutorService vs CachedThreadPool vs FixedThreadPool vs AsyncTasks vs HandlerThreads?
- - How does `ViewModel` instance provided to Activity and Fragment. How does `ViewModelProviderStore` decide when to retain the instance?
+ - How does `ViewModel` instance are provided to Activity and Fragment. How does `ViewModelProviderStore` decide when to retain the instance?
  - How do you inspect and solve Jank issue? [here](https://developer.android.com/studio/profile/jank-detection)
  - How does the OutOfMemory happens? 
  - How do you find memory leaks in Android applications?
  - What is Doze? What about App Standby? 
+ - How would you create a custom [live data](https://android.googlesource.com/platform/frameworks/support/+/a9ac247af2afd4115c3eb6d16c05bc92737d6305/lifecycle/livedata-core/src/main/java/androidx/lifecycle/LiveData.java) from scratch? It should take care about the following points 
+     - How will you take care of different lifecycle owners listening to this live data?
+     - Handling multiple observers. Notify only to observer associated with active lifecycle owner
+     - Difference between setValue and postValue? 
+ - 
  - What does `setContentView` do?
  - Process of creating a custom view
  - Deeplink understanding and architecture
@@ -134,6 +141,7 @@
  - What is SOLID principles?
  - What is MVVM?
  - Brief about Android Architecture.
+ - Pros of using modular approach [reference](https://jeroenmols.com/blog/2019/03/06/modularizationwhy/#why)
  - 
 
 ## System Design

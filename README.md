@@ -32,6 +32,9 @@
 - What is an Init block in Kotlin?
 - How to choose between apply and with?
 - What is inline function in Kotlin?
+- Difference between Coroutine and Java Thread
+- Why Coroutines are light weight?
+- How does Coroutine switch context?
 - 
 
 ## Android

@@ -27,6 +27,7 @@
 - What are different type of scope modifiers?
 - What are different Coroutine Scope?
 - Dispatcher.Main vs Dispatcher.Main.immediate [link](https://medium.com/@trionkidnapper/launching-a-kotlin-coroutine-for-immediate-execution-on-the-main-thread-8555e701163b)
+- Different types of Dispatchers [link](https://kt.academy/article/cc-dispatchers)
 - How to manage series and parallel execution?
 - Difference between Flow/SharedFlow/StateFlow and elaborate it.
 - What happens if we call `.cancel()` from a coroutine scope?

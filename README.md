@@ -28,11 +28,17 @@
 
 
 ## Kotlin
-- What is the difference between `const val` and `val`?
+- **What is the difference between `const val` and `val`?**
+    - Both are used to define read-only properties, but
+    - `const val` properties should be initialized at compile-time whereas `val` properties can be initialized at runtime
+    - If we decompile, `const val` variable will replace with its value but `val` not, because it can be initialized at runtime
+    -     const val BASE_URL = "https://github.com"
+          val githubHandle = "anandwana001"
+          val repoName: String
 - What is so interesting about `data class`?
 - Is singleton thread-safe? vs Object?
-- What are different type of scope modifiers?
-- What are different Coroutine Scope?
+- What are the different types of scope modifiers?
+- What are the different Coroutine Scopes?
 - How to manage series and parallel execution?
 - Difference between Flow/SharedFlow/StateFlow and elaborate it.
 - What happens if we call `.cancel()` from a coroutine scope?

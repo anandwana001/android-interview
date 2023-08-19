@@ -35,7 +35,12 @@
     -     const val BASE_URL = "https://github.com"
           val githubHandle = "anandwana001"
           val repoName: String
-- What is so interesting about `data class`?
+- **What is so interesting about `data class`?**
+   - Uses to hold data
+   - Pre-functions like `toString`, `equals`, `copy`, and `componentN`
+   - Data classes cannot be abstract, open, sealed, or inner.
+   - Data classes cannot extend other classes
+   - Supports destructuring declaration
 - Is singleton thread-safe? vs Object?
 - **What are the different types of scope functions?**
    - Let = `T.let { R }`

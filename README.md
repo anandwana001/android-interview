@@ -37,7 +37,27 @@
           val repoName: String
 - What is so interesting about `data class`?
 - Is singleton thread-safe? vs Object?
-- What are the different types of scope modifiers?
+- **What are the different types of scope functions?**
+   - Let = `T.let { R }`
+        - lambda result (R) is the return type
+        - can be performed on any `T` type object
+        - lambda reference is `it`
+        - suitable for null check
+   - Run = `T.run { R }`
+        - same as `let`, but mostly used in initializing an object
+        - lambda reference is `this`
+        - suitable for null check
+   - With = `with(T) { R }`
+        - if T is nullable object use `run` else use `with(T)`
+        - lambda reference is `this`
+        - not suitable for null check
+   - Also = `T.also { T }` 
+        - when need to perform multiple operations in chain use `also`
+        - lambda reference is `it`
+   - Apply = `T.apply { T }`
+        - when need to perform the operation on the `T` object and return the same use `apply`
+        - lambda reference is `this`
+        - suitable for null check
 - What are the different Coroutine Scopes?
 - How to manage series and parallel execution?
 - Difference between Flow/SharedFlow/StateFlow and elaborate it.

@@ -83,12 +83,12 @@
  - Difference between FragmentStateAdapter and FragmentStatePagerAdapter.
  - Difference between Serializable and Parcelable? What are the disadvantages of Serializable?
  - How you could implement observable SharedPrefs or observable Databases i.e. Observe a certain key/table/query?
- - How does layout inflation work from xml tags to view reference in memory?
- - What is a Thread, Handler, Looper and Message Queue?
+ - How does layout inflation work from xml tags to view references in memory?
+ - What is a Thread, Handler, Looper, and Message Queue?
  - What are the different methods of concurrency on Android? Can you explain the difference between ExecutorService vs CachedThreadPool vs FixedThreadPool vs AsyncTasks vs HandlerThreads?
- - How does `ViewModel` instance provided to Activity and Fragment. How does `ViewModelProviderStore` decide when to retain the instance?
- - How do you inspect and solve Jank issue? [here](https://developer.android.com/studio/profile/jank-detection)
- - How does the OutOfMemory happens? 
+ - How does `ViewModel` instance provide to Activity and Fragment? How does `ViewModelProviderStore` decide when to retain the instance?
+ - How do you inspect and solve the Jank issue? [here](https://developer.android.com/studio/profile/jank-detection)
+ - How does the OutOfMemory happen? 
  - How do you find memory leaks in Android applications?
  - What is Doze? What about App Standby? 
  - What does `setContentView` do?
@@ -99,65 +99,65 @@
  
   
 ### Lifecycle
- - How to keep a video maintain playing state when we rotate screen?
- - How many callbacks in Fragmnets?
- - What could be the reasons when `onPause` didn't get triggered?
+ - How to keep a video maintain a playing state when we rotate the screen?
+ - How many callbacks are in Fragments?
+ - What could be the reasons why `onPause` didn't get triggered?
  - What kind of events trigger `onPause()` to run?
  - In what scenario does the "onDestory" get called directly after "onCreate"?
  - Which callback gets called on Activity when an AlertDialog is shown?
  - What's the lifecycle in PIP (Picture-in-Picture)?
  - What happens if you rotate the device?
- - Inside a viewpager (Fragment state pager adapter) what will be the lifecycle of the fragments when you swap from tab to another ?
+ - Inside a viewpager (Fragment state pager adapter) what will be the lifecycle of the fragments when you swap from one tab to another?
  - Why onActivityCreated is now depreciated in Fragment?
- - Which callback should i use if i want to know when my activity came to foreground?
+ - Which callback should I use if I want to know when my activity came to the foreground?
  - When is onActivityResult called?
  - What does setRetainInstance do and how you can avoid it?
- - What callbacks trigger when a Dialog opens up? Conside both case, dialog attached from same activity/fragment and other activity/fragment.
- - What does `launchWhenCreated`, `launchWhenStarted`, and `launchWhenResumed` functions do?
- - 
+ - What callbacks trigger when a Dialog opens up? In both cases, the dialog is attached from the same activity/fragment and another activity/fragment.
+ - What do `launchWhenCreated`, `launchWhenStarted`, and `launchWhenResumed` functions do?
+ - Fragment Callbacks when moving from one fragment to another and coming back to prev one?
 
 ### Networking
 - What is the role of OkHttp and Retrofit?
 - What design pattern does Retrofit use?
-- How would optimise handling of access token expiration? How would you handle retry network call when the api fails? (Custom Interceptor response)
+- How would optimize the handling of access token expiration? How would you handle a retry network call when the API fails? (Custom Interceptor response)
 - 
 
 ### Webview
-- What are the problems around security when dealing with `WebView`.
+- What are the problems around security when dealing with `WebView`?
 - How to interact or make connections with JavaScript?
 - 
 
 ### Dependency Injection
 - Provides vs binds
-- Subcomponent vs component dependency, what is the difference under the hood
-- What is subcomponent and what is the use? How do you use qualifiers or how would you provide different instances of a class with the same data type? Constructor Injection V/s Method Injection? What is the scope? Singleton Annotation?
-- What is Circular dependency in dagger?, and how to resolve it
+- Subcomponent vs. component dependency, what is the difference under the hood
+- What is a subcomponent and what is its use? How do you use qualifiers or how would you provide different instances of a class with the same data type? Constructor Injection V/s Method Injection? What is the scope? Singleton Annotation?
+- What is Circular dependency in dagger? and how to resolve it
 - What's interesting about Hilt?
 - Did you use Koin? What are your thoughts on it?
 - 
 
 ### Jetpack Compose
-- How to launch coroutine from a composable function? - [LaunchedEffect](https://www.droidcon.com/2021/10/28/jetpack-compose-side-effects-ii-remembercoroutinescope/)
-- How to launch coroutine from a non-composable function, but tied to composition? - [rememberCoroutineScope()](https://www.droidcon.com/2021/10/28/jetpack-compose-side-effects-ii-remembercoroutinescope/)
+- How to launch a coroutine from a composable function? - [LaunchedEffect](https://www.droidcon.com/2021/10/28/jetpack-compose-side-effects-ii-remembercoroutinescope/)
+- How to launch a coroutine from a non-composable function, but tied to composition? - [rememberCoroutineScope()](https://www.droidcon.com/2021/10/28/jetpack-compose-side-effects-ii-remembercoroutinescope/)
 - What is recomposition? [Recomposition](https://developer.android.com/jetpack/compose/mental-model#recomposition)
 - **What is `remember` in compose?**
   - A composable function to remember the value produced by a calculation only at the time of composition. It will not calculate again in recomposition.
   - Recomposition will always return the value produced by composition.
-  - Whole Compose is based on concept of `Positional Memoization`
-  - At the time of recomosition, `remember` internally calls a function called `rememberedValue()` whose work is to look into the `slotTable` and compare if the previous value and the new value has any difference, if not return, else update value
+  - Whole Compose is based on the concept of `Positional Memoization`
+  - At the time of recomposition, `remember` internally calls a function called `rememberedValue()` whose work is to look into the `slotTable` and compare if the previous value and the new value have any difference, if not return, else update the value
 - Why and when to use `remember {}`?
 - Difference between `LazyColumn` and `RecyclerView`?
 - What is AndroidView in compose?
 - What is the lifecycle of composeables? [Lifecycle](https://developer.android.com/jetpack/compose/lifecycle)
 - How to avoid recomposition of any composable, if the state is not changed? [Smart Recomposition](https://developer.android.com/jetpack/compose/lifecycle#add-info-smart-recomposition)
-- What are stable types which can skip recomposition?
+- What are stable types that can skip recomposition?
 - What is State?
-- What is MutableState and how does recomposition happens?
-- How to retain State accross recomposition and configuration changes?
-- Difference between Stateless and Statefull composeables?
-- What are your thoughts on flat heirarchy, constraint Layout in compose vs the older view heirarchy in xml
+- What is MutableState and how does recomposition happen?
+- How to retain State across recomposition and configuration changes?
+- Difference between Stateless and Stateful composeables?
+- What are your thoughts on flat hierarchy, constraint Layout in compose vs. the older view hierarchy in xml
 - Difference b/w remember and LaunchedEffect
-- Does re-composition of `ComposeItem1` bring any affect on `ComposeItem2`? If yes, then how? 
+- Does re-composition of `ComposeItem1` bring any effect on `ComposeItem2`? If yes, then how? 
   - `ComposeParent() { ComposeItem1 {} ComposeItem2() {...} } `
   - What is `CompositionLocal`?
 - Custom views in compose
@@ -165,14 +165,14 @@
 - 
 
 ## Thread
- - Different type of threads?
- - Difference between different type of thread?
+ - Different types of threads?
+ - Difference between different types of thread?
  - Thread <-> Handler <-> looper
  - UI vs Background Thread
  - 
  
 ## Architecture
- - What is SOLID principles?
+ - What are SOLID principles?
  - What is MVVM?
  - Brief about Android Architecture.
  - 
@@ -190,8 +190,8 @@
  - 
  
 ## Libraries
- - How Glide internally works?
- - Hoe does retrofit workss internally?
+ - How does Glide internally work?
+ - How does retrofit work internally?
  - ViewModel internal working
  - 
  
@@ -206,16 +206,16 @@
 ## Questions from Company
 | Company | Questions |
 |  --- | --- |
-| Booking.com | <ul><li>Implement findViewById method</li> <li>Given a list of words as input, output another list of strings, each containing words that are mutual anagrams</li> <li>Identify whether four sides (given by four integers) can form a square, a rectangle or neither</li> <li>Output a delta encoding for the sequence. In a delta encoding, the first element is reproduced as-is. Each subsequent element is represented as the numeric difference from the element before it</li> <li>Three integer arrays are given with duplicate numbers. Find the common elements among three arrays</li> <li>Twisted question related to ConcurrentModificationException in an ArrayList</li> <li>How do you implement a hotel list and detail screen. Discuss what all APIs You will create how the layout will be </li> <li>Fragments & their lifecycle, Activity lifecycle, Views, Layouts </li> <li> Background task in Android - Asynctask, service, intent services etc </li> <li> Given dates and number of check-in and check-out on those dates. Find the busiest day of the hotel. [Merge Array interval type question]</li> <li> given an array, determine if there are repeated elements. If an element is repeated more than 3 times, return those elements. This question is basically doing a hash and checking if the hash already exists. Someone used a Map and a Set. </li> <li> Given an list of positive words, negative words and a review, determine if the review is flagged as positive, negative or neutral. Someone solved it using a Set. Someone just needed to do some count (+ or -) regarding on where the word appeard (positive list or negative). </li> </ul>| 
-| Spotify | <ul> <li> Design components and overall architecture for a Search feature in an Android application. [Spotify - Android Engineer II - London, UK - Sep 2022] </li> <li> Design a Disk based Cache for client. [Spotify System Design Android/iOS Client] `Platform independent, Key will be 32 bytes, Value can be anything but in Byte array, Cache should be persistent, Cache should max hold 100k+ Objects, Cache Max size should be configurable ( Max Size : 10 MB upto 1GB), Cache should be opaque, Cache should be Secure` </li> <li>[Linked List Cycle](https://leetcode.com/problems/linked-list-cycle/) </li> <li> [Palindrome Linked List](https://leetcode.com/problems/palindrome-linked-list/) </li></ul>|
+| Booking.com | <ul><li>Implement findViewById method</li> <li>Given a list of words as input, output another list of strings, each containing words that are mutual anagrams</li> <li>Identify whether four sides (given by four integers) can form a square, a rectangle or neither</li> <li>Output a delta encoding for the sequence. In a delta encoding, the first element is reproduced as-is. Each subsequent element is represented as the numeric difference from the element before it</li> <li>Three integer arrays are given with duplicate numbers. Find the common elements among three arrays</li> <li>Twisted question related to ConcurrentModificationException in an ArrayList</li> <li>How do you implement a hotel list and detail screen? Discuss what all APIs You will create and how the layout will be </li> <li>Fragments & their lifecycle, Activity lifecycle, Views, Layouts </li> <li> Background task in Android - Asynctask, service, intent services, etc </li> <li> Given dates and number of check-in and check-out on those dates. Find the busiest day in the hotel. [Merge Array interval type question]</li> <li> Given an array, determine if there are repeated elements. If an element is repeated more than 3 times, return those elements. This question is basically doing a hash and checking if the hash already exists. Someone used a Map and a Set. </li> <li> Given a list of positive words, negative words, and a review, determine if the review is flagged as positive, negative, or neutral. Someone solved it using a Set. Someone just needed to do some count (+ or -) regarding where the word appeared (positive list or negative). </li> </ul>| 
+| Spotify | <ul> <li> Design components and overall architecture for a Search feature in an Android application. [Spotify - Android Engineer II - London, UK - Sep 2022] </li> <li> Design a Disk based Cache for the client. [Spotify System Design Android/iOS Client] `Platform independent, Key will be 32 bytes, Value can be anything but in Byte array, Cache should be persistent, Cache should max hold 100k+ Objects, Cache Max size should be configurable ( Max Size: 10 MB upto 1GB), Cache should be opaque, Cache should be Secure` </li> <li>[Linked List Cycle](https://leetcode.com/problems/linked-list-cycle/) </li> <li> [Palindrome Linked List](https://leetcode.com/problems/palindrome-linked-list/) </li></ul>|
 | PhonePe | <ul> <li> Minimum Meetroom scheduling </li> <li> Anagram Strings based question </li></ul> |
-| Paytm | <ul> <li> To check if strings are rotations of each other or not. And if they are in rotation print the no. of rotations. </li> <li> Find the string is panagram or not </li> <li>Design components and overall architecture for a Search feature in an Android application</li> <li> Sort an array of 0s, 1s and 2s </li> <li> Abstract vs Interface </li> <li> Android Memory related </li></ul> |
-| Meesho | <ul> <li> SOLID principles </li> <li> Dagger, why use dependency injection, what if we do not think it is important, like alternatives. How to create our own dependency injection library. </li> <li> why use MVVM over MVP, think outside the box, we could have used observables using RxJava etc. - open ended questions around it </li> <li> Multi Module benefits and why use it</li> <li> How to handle dependencies or abstraction in multi module </li> <li> val vs const </li> <li> inline keyword </li> <li> lateinit vs lazy </li> </ul>|
+| Paytm | <ul> <li> To check if strings are rotations of each other or not. If they are in rotation print the no. of rotations. </li> <li> Find the string is anagram or not </li> <li>Design components and overall architecture for a Search feature in an Android application</li> <li> Sort an array of 0s, 1s and 2s </li> <li> Abstract vs Interface </li> <li> Android Memory related </li></ul> |
+| Meesho | <ul> <li> SOLID principles </li> <li> Dagger, why use dependency injection, what if we do not think it is important, like alternatives? How to create our own dependency injection library. </li> <li> why use MVVM over MVP, think outside the box, we could have used observables using RxJava, etc. - open-ended questions around it </li> <li> Multi-Module benefits and why use it</li> <li> How to handle dependencies or abstraction in multi-module </li> <li> val vs const </li> <li> inline keyword </li> <li> lateinit vs lazy </li> </ul>|
 
 
 ------
 
 ## Contributing Guidelines
-What interesting questions you had faced while giving interview for Android Engineer role (any level)? Let's open a PR.
+What interesting questions do you face while giving an interview for an Android Engineer role (any level)? Let's open a PR.
 
-## If this repository helps you in anyway, show your love :heart: by putting a :star: on this project :v:
+## If this repository helps you in any way, show your love :heart: by putting a :star: on this project :v:

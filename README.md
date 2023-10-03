@@ -95,6 +95,7 @@
  - Process of creating a custom view
  - Deeplink understanding and architecture
  - Notifications
+ - Difference between Fragment Lifecycle Observer and View Lifecycle Observer.
  - 
  
   
@@ -115,6 +116,9 @@
  - What callbacks trigger when a Dialog opens up? In both cases, the dialog is attached from the same activity/fragment and another activity/fragment.
  - What do `launchWhenCreated`, `launchWhenStarted`, and `launchWhenResumed` functions do?
  - Fragment Callbacks when moving from one fragment to another and coming back to prev one?
+ - Does onCreateView get called after coming to a fragment from top fragment?
+ - 
+
 
 ### Networking
 - What is the role of OkHttp and Retrofit?
@@ -122,10 +126,12 @@
 - How would optimize the handling of access token expiration? How would you handle a retry network call when the API fails? (Custom Interceptor response)
 - 
 
+
 ### Webview
 - What are the problems around security when dealing with `WebView`?
 - How to interact or make connections with JavaScript?
 - 
+
 
 ### Dependency Injection
 - Provides vs binds
@@ -135,6 +141,7 @@
 - What's interesting about Hilt?
 - Did you use Koin? What are your thoughts on it?
 - 
+
 
 ### Jetpack Compose
 - How to launch a coroutine from a composable function? - [LaunchedEffect](https://www.droidcon.com/2021/10/28/jetpack-compose-side-effects-ii-remembercoroutinescope/)
@@ -162,20 +169,27 @@
   - What is `CompositionLocal`?
 - Custom views in compose
 - Canvas in Compose
+- What are the benefits of Jetpack Compose?
 - 
+
 
 ## Thread
  - Different types of threads?
  - Difference between different types of thread?
  - Thread <-> Handler <-> looper
  - UI vs Background Thread
+ - How do you know when some process if blocking a UI thread?
  - 
  
+
 ## Architecture
  - What are SOLID principles?
  - What is MVVM?
  - Brief about Android Architecture.
+ - MVP vs MVVM?
+ - Is there any issue in the Presenter in the MVP?
  - 
+
 
 ## System Design
  - Design Image Loading Library
@@ -189,6 +203,7 @@
  - Implement caching mechanism
  - 
  
+
 ## Libraries
  - How does Glide internally work?
  - How does retrofit work internally?
@@ -203,6 +218,7 @@
  - Java OOP concepts
  - 
  
+
 ## Questions from Company
 | Company | Questions |
 |  --- | --- |

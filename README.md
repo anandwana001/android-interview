@@ -73,7 +73,6 @@
 - Difference between Coroutine and Java Thread
 - Why Coroutines are light weight?
 - How does Coroutine switch context?
-- 
 
 ## Android
  - How does Garbage collection works?
@@ -95,8 +94,6 @@
  - Process of creating a custom view
  - Deeplink understanding and architecture
  - Notifications
- - 
- 
   
 ### Lifecycle
  - How to keep a video maintain a playing state when we rotate the screen?
@@ -120,12 +117,10 @@
 - What is the role of OkHttp and Retrofit?
 - What design pattern does Retrofit use?
 - How would optimize the handling of access token expiration? How would you handle a retry network call when the API fails? (Custom Interceptor response)
-- 
 
 ### Webview
 - What are the problems around security when dealing with `WebView`?
 - How to interact or make connections with JavaScript?
-- 
 
 ### Dependency Injection
 - Provides vs binds
@@ -134,7 +129,6 @@
 - What is Circular dependency in dagger? and how to resolve it
 - What's interesting about Hilt?
 - Did you use Koin? What are your thoughts on it?
-- 
 
 ### Jetpack Compose
 - How to launch a coroutine from a composable function? - [LaunchedEffect](https://www.droidcon.com/2021/10/28/jetpack-compose-side-effects-ii-remembercoroutinescope/)
@@ -162,20 +156,17 @@
   - What is `CompositionLocal`?
 - Custom views in compose
 - Canvas in Compose
-- 
 
 ## Thread
  - Different types of threads?
  - Difference between different types of thread?
  - Thread <-> Handler <-> looper
  - UI vs Background Thread
- - 
  
 ## Architecture
  - What are SOLID principles?
  - What is MVVM?
  - Brief about Android Architecture.
- - 
 
 ## System Design
  - Design Image Loading Library
@@ -187,21 +178,17 @@
  - Design Error handling Structure
  - REST <-> Web Sockets
  - Implement caching mechanism
- - 
- 
+
 ## Libraries
  - How does Glide internally work?
  - How does retrofit work internally?
  - ViewModel internal working
- - 
- 
 
 ## Common Question
  - `String` vs `StringBuilder`
  - `==` vs `.equals`?
  - `===` vs `==`?
  - Java OOP concepts
- - 
  
 ## Questions from Company
 | Company | Questions |

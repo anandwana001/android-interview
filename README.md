@@ -113,6 +113,60 @@
  - What do `launchWhenCreated`, `launchWhenStarted`, and `launchWhenResumed` functions do?
  - Fragment Callbacks when moving from one fragment to another and coming back to prev one?
 
+#### Important Lifecycle Points to Remember
+
+##### Opening a fragment from Activity
+
+Code
+```
+supportFragmentManager.beginTransaction()
+    .replace(R.id.fragment_container, FragmentA())
+    .commit()
+```
+
+Callbacks
+| | |
+|--|--|
+| MainActivity  |  onCreate |
+| FragmentA   |    onAttach |
+| FragmentA      |    onCreate |
+| FragmentA    |      onCreateView |
+| FragmentA    |      onViewCreated |
+| FragmentA    |      CREATED == Lifecycle.State |
+| FragmentA    |      onViewStateRestored |
+| FragmentA    |      onStart |
+| FragmentA     |     STARTED == Lifecycle.State |
+| MainActivity   |    onStart |
+| MainActivity   |    onResume |
+| FragmentA   |       onResume |
+| FragmentA    |      RESUMED == Lifecycle.State |
+| MainActivity    |   onAttachedToWindow |
+
+
+#### Opening a Fragment from a Fragment
+
+Code
+```
+parentFragmentManager.beginTransaction()
+    .add(R.id.fragment_container, FragmentB())
+    .commit()
+```
+
+Callbacks
+| | |
+|--|--|
+| FragmentB   |    onAttach |
+| FragmentB      |    onCreate |
+| FragmentB    |      onCreateView |
+| FragmentB    |      onViewCreated |
+| FragmentB    |      CREATED == Lifecycle.State |
+| FragmentB    |      onViewStateRestored |
+| FragmentB    |      onStart |
+| FragmentB     |     STARTED == Lifecycle.State |
+| FragmentB    |      onResume |
+| FragmentB     |     RESUMED == Lifecycle.State |
+
+
 ### Networking
 - What is the role of OkHttp and Retrofit?
 - What design pattern does Retrofit use?

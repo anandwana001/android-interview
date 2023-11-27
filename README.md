@@ -73,7 +73,6 @@
 - Difference between Coroutine and Java Thread
 - Why Coroutines are light weight?
 - How does Coroutine switch context?
-- 
 
 ## Android
  - How does Garbage collection works?
@@ -96,8 +95,6 @@
  - Deeplink understanding and architecture
  - Notifications
  - Difference between Fragment Lifecycle Observer and View Lifecycle Observer.
- - 
- 
   
 ### Lifecycle
  - How to keep a video maintain a playing state when we rotate the screen?
@@ -120,17 +117,69 @@
  - 
 
 
+#### Important Lifecycle Points to Remember
+
+##### Opening a fragment from Activity
+
+Code
+```
+supportFragmentManager.beginTransaction()
+    .replace(R.id.fragment_container, FragmentA())
+    .commit()
+```
+
+Callbacks
+| | |
+|--|--|
+| MainActivity  |  onCreate |
+| FragmentA   |    onAttach |
+| FragmentA      |    onCreate |
+| FragmentA    |      onCreateView |
+| FragmentA    |      onViewCreated |
+| FragmentA    |      CREATED == Lifecycle.State |
+| FragmentA    |      onViewStateRestored |
+| FragmentA    |      onStart |
+| FragmentA     |     STARTED == Lifecycle.State |
+| MainActivity   |    onStart |
+| MainActivity   |    onResume |
+| FragmentA   |       onResume |
+| FragmentA    |      RESUMED == Lifecycle.State |
+| MainActivity    |   onAttachedToWindow |
+
+
+#### Opening a Fragment from a Fragment
+
+Code
+```
+parentFragmentManager.beginTransaction()
+    .add(R.id.fragment_container, FragmentB())
+    .commit()
+```
+
+Callbacks
+| | |
+|--|--|
+| FragmentB   |    onAttach |
+| FragmentB      |    onCreate |
+| FragmentB    |      onCreateView |
+| FragmentB    |      onViewCreated |
+| FragmentB    |      CREATED == Lifecycle.State |
+| FragmentB    |      onViewStateRestored |
+| FragmentB    |      onStart |
+| FragmentB     |     STARTED == Lifecycle.State |
+| FragmentB    |      onResume |
+| FragmentB     |     RESUMED == Lifecycle.State |
+
+
 ### Networking
 - What is the role of OkHttp and Retrofit?
 - What design pattern does Retrofit use?
 - How would optimize the handling of access token expiration? How would you handle a retry network call when the API fails? (Custom Interceptor response)
-- 
 
 
 ### Webview
 - What are the problems around security when dealing with `WebView`?
 - How to interact or make connections with JavaScript?
-- 
 
 
 ### Dependency Injection
@@ -140,7 +189,6 @@
 - What is Circular dependency in dagger? and how to resolve it
 - What's interesting about Hilt?
 - Did you use Koin? What are your thoughts on it?
-- 
 
 
 ### Jetpack Compose
@@ -170,7 +218,6 @@
 - Custom views in compose
 - Canvas in Compose
 - What are the benefits of Jetpack Compose?
-- 
 
 
 ## Thread
@@ -179,8 +226,6 @@
  - Thread <-> Handler <-> looper
  - UI vs Background Thread
  - How do you know when some process if blocking a UI thread?
- - 
- 
 
 ## Architecture
  - What are SOLID principles?
@@ -188,7 +233,6 @@
  - Brief about Android Architecture.
  - MVP vs MVVM?
  - Is there any issue in the Presenter in the MVP?
- - 
 
 
 ## System Design
@@ -201,22 +245,17 @@
  - Design Error handling Structure
  - REST <-> Web Sockets
  - Implement caching mechanism
- - 
- 
 
 ## Libraries
  - How does Glide internally work?
  - How does retrofit work internally?
  - ViewModel internal working
- - 
- 
 
 ## Common Question
  - `String` vs `StringBuilder`
  - `==` vs `.equals`?
  - `===` vs `==`?
  - Java OOP concepts
- - 
  
 
 ## Questions from Company

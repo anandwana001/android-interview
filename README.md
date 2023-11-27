@@ -147,7 +147,7 @@ Callbacks
 | MainActivity    |   onAttachedToWindow |
 
 
-#### Opening a Fragment from a Fragment
+#### Adding a Fragment from a Fragment
 
 Code
 ```
@@ -155,21 +155,196 @@ parentFragmentManager.beginTransaction()
     .add(R.id.fragment_container, FragmentB())
     .commit()
 ```
+```
+parentFragmentManager.beginTransaction()
+    .add(R.id.fragment_container, FragmentB())
+    .addToBackStack(null)
+    .commit()
+```
 
 Callbacks
 | | |
 |--|--|
 | FragmentB   |    onAttach |
-| FragmentB      |    onCreate |
-| FragmentB    |      onCreateView |
-| FragmentB    |      onViewCreated |
-| FragmentB    |      CREATED == Lifecycle.State |
-| FragmentB    |      onViewStateRestored |
-| FragmentB    |      onStart |
-| FragmentB     |     STARTED == Lifecycle.State |
-| FragmentB    |      onResume |
-| FragmentB     |     RESUMED == Lifecycle.State |
+| FragmentB   |    onCreate |
+| FragmentB   |    onCreateView |
+| FragmentB   |    onViewCreated |
+| FragmentB   |    CREATED == Lifecycle.State |
+| FragmentB   |    onViewStateRestored |
+| FragmentB   |    onStart |
+| FragmentB   |    STARTED == Lifecycle.State |
+| FragmentB   |    onResume |
+| FragmentB   |    RESUMED == Lifecycle.State |
 
+
+#### Replacing a Fragment from a Fragment
+
+Code
+```
+parentFragmentManager.beginTransaction()
+    .replace(R.id.fragment_container, FragmentB())
+    .addToBackStack(null)
+    .commit()
+```
+
+Callbacks
+| | |
+|--|--|
+| FragmentA  | onPause |
+| FragmentA  | onStop |
+| FragmentB  | onAttach |
+| FragmentB  | onCreate |
+| FragmentB  | onCreateView |
+| FragmentB  | onViewCreated |
+| FragmentB  | CREATED == Lifecycle.State |
+| FragmentB  | onViewStateRestored |
+| FragmentB  | onStart |
+| FragmentB  | STARTED == Lifecycle.State |
+| **FragmentA**  | **onDestroyView** |
+| FragmentB  | onResume |
+| FragmentB  | RESUMED == Lifecycle.State |
+
+
+Code
+```
+parentFragmentManager.beginTransaction()
+    .replace(R.id.fragment_container, FragmentB())
+    .commit()
+```
+
+Callbacks
+| | |
+|--|--|
+| FragmentA  | onPause |
+| FragmentA  | onStop |
+| FragmentB  | onAttach |
+| FragmentB  | onCreate |
+| FragmentB  | onCreateView |
+| FragmentB  | onViewCreated |
+| FragmentB  | CREATED == Lifecycle.State |
+| FragmentB  | onViewStateRestored |
+| FragmentB  | onStart |
+| FragmentB  | STARTED == Lifecycle.State |
+| FragmentA  | onDestroyView |
+| **FragmentA**  | **onDestroy** |
+| **FragmentA**  | **onDetach** |
+| FragmentB  | onResume |
+| FragmentB  | RESUMED == Lifecycle.State |
+
+#### Coming Back to Previous Fragment after Adding
+
+Note: If `addToBackStack` is not used, and back stack is empty, nothing will happen when calling `popBackStack()` function
+
+Code
+```
+// FragmentA
+parentFragmentManager.beginTransaction()
+    .add(R.id.fragment_container, FragmentB())
+    .addToBackStack(null)
+    .commit()
+
+// FragmentB
+parentFragmentManager.popBackStack()
+```
+
+Callbacks
+| | |
+|--|--|
+| FragmentB  | onPause  |
+| FragmentB  | onStop |
+| FragmentB  | onDestroyView |
+| FragmentB  | onDestroy |
+| FragmentB  | onDetach |
+
+FragmentA is visible. No FragmentA callbacks as FragmentA is always there, neither the view nor the lifecycle get affected.
+
+#### Coming Back to Previous Fragment after Replacing
+
+
+Note: If `addToBackStack` is not used, and back stack is empty, nothing will happen when calling `popBackStack()` function
+
+Code
+```
+// FragmentA
+parentFragmentManager.beginTransaction()
+    .replace(R.id.fragment_container, FragmentB())
+    .addToBackStack(null)
+    .commit()
+
+// FragmentB
+parentFragmentManager.popBackStack()
+```
+
+Callbacks
+| | |
+|--|--|
+| FragmentB  | onPause | 
+| FragmentB  | onStop | 
+| **FragmentA**  | **onCreateView** | 
+| **FragmentA**  | **onViewCreated** | 
+| **FragmentA**  | **CREATED** == Lifecycle.State |
+| **FragmentA**  | **onViewStateRestored** | 
+| **FragmentA**  | **onStart** | 
+| **FragmentA**  | **STARTED** == Lifecycle.State |
+| FragmentB  | onDestroyView | 
+| FragmentB  | onDestroy | 
+| FragmentB  | onDetach | 
+| **FragmentA**  | **onResume** | 
+| **FragmentA**  | **RESUMED** == Lifecycle.State |
+
+FragmentA view is created again. When replacing, the FragmentA view gets destroyed, `onDestroyView` gets called so when coming back it calls `onCreateView` to initialise the view again.
+Though, `onCreate` will not get called again.
+
+#### Lifecycle State
+
+There are 5 States:
+ - DESTROYED
+ - INITIALIZED
+ - CREATED
+ - STARTED
+ - RESUMED
+
+![](https://developer.android.com/static/images/guide/fragments/fragment-view-lifecycle.png)
+
+
+##### Points to Remember
+
+States are based on Context/Scope you are using in. 
+Example:
+```
+viewLifecycleOwner.lifecycleScope.launch {
+    repeatOnLifecycle(Lifecycle.State.CREATED) {
+        //...
+    }
+}
+// viewLifecycleOwner => Lifecycle of the View
+// should be used between onCreateView() and onDestroyView()
+```
+
+```
+this.lifecycleScope.launch {
+    repeatOnLifecycle(Lifecycle.State.CREATED) {
+        //...
+    }
+}
+// this => Lifecycle of Fragment or Activity
+```
+
+| | |
+|--|--|
+| CREATED | - listen in `onDestroyView` (if not View lifecycle) and in `onStop`, `onSavedInstance` too  |
+| STARTED | - listen in `onStart`, `onPause` |
+| RESUMED | - listen in `onResume` |
+| DESTROYED | - listen in `onDestroyView` (if View lifecycle) and in `onDestroy` |
+| CREATED | - listen in `onViewStateRestored` (if View lifecycle) |
+| CREATED | - listen in `onCreate`, `onCreateView`, `onViewCreated`, `onViewStateRestored` (if not View lifecycle) |
+
+
+#### Examples
+
+- if state CREATED and app moves to background, it will listen. Hence, Avoid UI work here
+- use state CREATED if need to complete action even after Fragment View destroy
+- 
 
 ### Networking
 - What is the role of OkHttp and Retrofit?

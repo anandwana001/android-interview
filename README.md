@@ -291,6 +291,56 @@ Callbacks
 FragmentA view is created again. When replacing, the FragmentA view gets destroyed, `onDestroyView` gets called so when coming back it calls `onCreateView` to initialise the view again.
 Though, `onCreate` will not get called again.
 
+#### Lifecycle State
+
+There are 5 States:
+ - DESTROYED
+ - INITIALIZED
+ - CREATED
+ - STARTED
+ - RESUMED
+
+![](https://developer.android.com/static/images/guide/fragments/fragment-view-lifecycle.png)
+
+
+##### Points to Remember
+
+States are based on Context/Scope you are using in. 
+Example:
+```
+viewLifecycleOwner.lifecycleScope.launch {
+    repeatOnLifecycle(Lifecycle.State.CREATED) {
+        //...
+    }
+}
+// viewLifecycleOwner => Lifecycle of the View
+// should be used between onCreateView() and onDestroyView()
+```
+
+```
+this.lifecycleScope.launch {
+    repeatOnLifecycle(Lifecycle.State.CREATED) {
+        //...
+    }
+}
+// this => Lifecycle of Fragment or Activity
+```
+
+| | |
+|--|--|
+| CREATED | - listen in `onDestroyView` (if not View lifecycle) and in `onStop`, `onSavedInstance` too  |
+| STARTED | - listen in `onStart`, `onPause` |
+| RESUMED | - listen in `onResume` |
+| DESTROYED | - listen in `onDestroyView` (if View lifecycle) and in `onDestroy` |
+| CREATED | - listen in `onViewStateRestored` (if View lifecycle) |
+| CREATED | - listen in `onCreate`, `onCreateView`, `onViewCreated`, `onViewStateRestored` (if not View lifecycle) |
+
+
+#### Examples
+
+- if state CREATED and app moves to background, it will listen. Hence, Avoid UI work here
+- use state CREATED if need to complete action even after Fragment View destroy
+- 
 
 ### Networking
 - What is the role of OkHttp and Retrofit?

@@ -445,6 +445,10 @@ this.lifecycleScope.launch {
 
 ------
 
+## Kotlin Sheet 2024
+![](https://github.com/anandwana001/android-interview/blob/main/Kotlin%20Sheet%202024.gif)
+
+
 ## Contributing Guidelines
 What interesting questions do you face while giving an interview for an Android Engineer role (any level)? Let's open a PR.
 

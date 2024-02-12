@@ -462,16 +462,18 @@ this.lifecycleScope.launch {
 | Fundamental Components | <li>Activity</li><li>Services</li><li>Broadcast Receiver</li><li>Content Provider</li>|
 | Intent |<li>Implicit Intent</li><li>Explicit Intent</li><li>Intent Filters</li><li>Intent Flags</li>|
 |Activity|<li>Activity Lifecycle</li><li>Tasks and Back Stacks</li><li>Bundles</li><li>Parcelables</li><li>Recent Screens</li><li>App Shortcuts</li><li>Context</li>|
-|Services|<li>Service Lifecycle</li><li>Foreground Service</li><li>Background Service</li><li>Bound Service</li><li>AIDL</li><li>Job Scheduler</li><li>WorkManager</li>|
+|Services|<li>Service Lifecycle</li><li>Foreground Service</li><li>Background Service</li><li>Bound Service</li><li>AIDL</li><li>Job Scheduler</li><li>WorkManager</li><li>IntentService</li>|
 |Broadcast Receiver|<li>Pub-Sub</li><li>System Broadcast</li><li>Permissions</li><li>Security</li>|
 |Content Provider|<li>Content Resolver</li><li>Cursor</li><li>MIME Types</li><li>Contracts</li>|
 |Data Storage|<li>App Specific Storage</li><li>Shared Storage</li><li>Preferences</li><li>Database</li><li>Scoped Storage</li><li>LRU Cache</li><li>SQLite</li><li>ROOM</li><li>Data Store</li>|
-|Fragments|<li>Fragment Lifecycle</li><li>Dialog Fragment</li><li>Fragment Transactions</li><li>Fragment Manager</li><li>View Lifecycle</li>|
+|Fragments|<li>Fragment Lifecycle</li><li>Dialog Fragment</li><li>Fragment Transactions</li><li>Fragment Manager</li><li>View Lifecycle</li><li>BackStack</li><li>Fragment-Activity Communication</li><li>Fragment-Fragment Communication</li>|
 |Navigation Component |<li>Host</li><li>Graph</li><li>Controller</li><li>Back Stacks</li><li>Destinations</li><li>Deeplink</li>|
 |UI |<li>XML</li><li>Jetpack Compose</li>|
-|Jetpack Compose|<li>Composition</li><li>ReComposition</li><li>State Hoisting</li><li>Remember</li><li>RememberSaveable</li><li>Side Effects</li><li>LaunchedEffect</li><li>DisposableEffect</li><li>DerivedStateOf</li><li>SnapshotFlow</li><li>CompositionLocal</li><li>Theming</li><li>Modifier</li><li>Layouts</li><li>Box/Column/Row</li><li>Image</li><li>Coil</li><li>LazyColumn/LayRow</li><li>Text/Button/ other ui components</li>|
+|Jetpack Compose|<li>Composition</li><li>ReComposition</li><li>State Hoisting</li><li>Remember</li><li>RememberSaveable</li><li>Side Effects</li><li>LaunchedEffect</li><li>DisposableEffect</li><li>DerivedStateOf</li><li>SnapshotFlow</li><li>CompositionLocal</li><li>Theming</li><li>Modifier</li><li>Layouts</li><li>Box/Column/Row</li><li>Image/painter</li><li>Coil</li><li>LazyColumn/LayRow</li><li>Text/Button/ other ui components</li>|
+|Jetpack Components|<li>ViewModel</li><li>LiveData</li><li>Paging</li><li>Lifecycle</li><li>WorkManager</li><li>Data Binding</li>|
 |Testing|<li>UI Testing</li><li>Unit Testing</li><li>Espresso</li><li>Robolectric</li><li>Mockk</li>|
-|Debuggin|<li>Logcat</li><li>Timber</li><li>Break Points</li><li>Chucker</li><li>Charles</li><li>LeakCanary</li>|
+|Debugging|<li>Logcat</li><li>Timber</li><li>Break Points</li><li>Chucker</li><li>Charles</li><li>LeakCanary</li>|
+|Libraries|<li>Retrofit</li><li>OkHttp</li><li>Glide</li><li>Material3</li><li>Hilt</li><li>Dagger</li><li>Retrofit</li>|
 |Benchmark|<li>Micro Benchmark</li><li>Macro Benchmark</li>|
 |Static Analysis|<li>Ktlint</li><li>Detekt</li><li>Android Lint</li>|
 |GitHub Actions|<li>Pipeline</li><li>Build Generation</li><li>Workflow</li>|
@@ -481,6 +483,7 @@ this.lifecycleScope.launch {
 |Code Architecture|<li>MVP</li><li>MVVM</li><li>MVI</li><li>Modularization</li><li>Design Patterns</li><li>Network Layer</li><li>Data Layer</li><li>UI Layer</li><li>Domain/Repository/...</li>|
 |Firebase |<li>Crashlytics</li><li>Remote Config</li><li>A/B Testing</li>|
 |App Release|<li>App Release Process</li><li>App Distribution</li><li>Google Play Console</li><li>App Review/Ratings</li><li>App Size</li><li>App Policies</li>|
+
 
 ------
 

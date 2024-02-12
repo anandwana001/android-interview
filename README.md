@@ -468,9 +468,9 @@ this.lifecycleScope.launch {
 |Data Storage|<li>App Specific Storage</li><li>Shared Storage</li><li>Preferences</li><li>Database</li><li>Scoped Storage</li><li>LRU Cache</li><li>SQLite</li><li>ROOM</li><li>Data Store</li>|
 |Fragments|<li>Fragment Lifecycle</li><li>Dialog Fragment</li><li>Fragment Transactions</li><li>Fragment Manager</li><li>View Lifecycle</li><li>BackStack</li><li>Fragment-Activity Communication</li><li>Fragment-Fragment Communication</li>|
 |Navigation Component |<li>Host</li><li>Graph</li><li>Controller</li><li>Back Stacks</li><li>Destinations</li><li>Deeplink</li>|
+|Jetpack Components|<li>ViewModel</li><li>LiveData</li><li>Paging</li><li>Lifecycle</li><li>WorkManager</li><li>Data Binding</li>|
 |UI |<li>XML</li><li>Jetpack Compose</li>|
 |Jetpack Compose|<li>Composition</li><li>ReComposition</li><li>State Hoisting</li><li>Remember</li><li>RememberSaveable</li><li>Side Effects</li><li>LaunchedEffect</li><li>DisposableEffect</li><li>DerivedStateOf</li><li>SnapshotFlow</li><li>CompositionLocal</li><li>Theming</li><li>Modifier</li><li>Layouts</li><li>Box/Column/Row</li><li>Image/painter</li><li>Coil</li><li>LazyColumn/LayRow</li><li>Text/Button/ other ui components</li>|
-|Jetpack Components|<li>ViewModel</li><li>LiveData</li><li>Paging</li><li>Lifecycle</li><li>WorkManager</li><li>Data Binding</li>|
 |Testing|<li>UI Testing</li><li>Unit Testing</li><li>Espresso</li><li>Robolectric</li><li>Mockk</li>|
 |Debugging|<li>Logcat</li><li>Timber</li><li>Break Points</li><li>Chucker</li><li>Charles</li><li>LeakCanary</li>|
 |Libraries|<li>Retrofit</li><li>OkHttp</li><li>Glide</li><li>Material3</li><li>Hilt</li><li>Dagger</li><li>Retrofit</li>|

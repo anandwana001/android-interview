@@ -3,16 +3,17 @@
 ![Android](https://img.shields.io/badge/Android-3DDC84?style=for-the-badge&logo=android&logoColor=white)
 ![Kotlin](https://img.shields.io/badge/kotlin-%237F52FF.svg?style=for-the-badge&logo=kotlin&logoColor=white)
 
-## Free Learning
-![YouTube Channel Views](https://img.shields.io/youtube/channel/views/UCDCfc6KDfvaZSUFQnvz8lWQ)<br>
-😎 [Do Subscribe to Keep us motivated](https://www.youtube.com/@anandwana001) 😎
+## Let's Learn for Free! [Click Here](https://www.youtube.com/@anandwana001)
 
 
 ## Need a Mentor? [Click Here](https://topmate.io/anandwana001)
-<img src="https://github.com/anandwana001/anandwana001/assets/25057618/8fb4b911-28a9-460e-824b-67b06f215d95" width=400 height=80/>
+
+## Complete Android Engineer Roadmap
+* [Roadmap 2024](#android-roadmap-2024)
 
 
-## Contents
+
+## Interview Contents
 
 * [Kotlin](#kotlin)
 * [Android](#android)
@@ -445,6 +446,41 @@ this.lifecycleScope.launch {
 | Paytm | <ul> <li> To check if strings are rotations of each other or not. If they are in rotation print the no. of rotations. </li> <li> Find the string is anagram or not </li> <li>Design components and overall architecture for a Search feature in an Android application</li> <li> Sort an array of 0s, 1s and 2s </li> <li> Abstract vs Interface </li> <li> Android Memory related </li></ul> |
 | Meesho | <ul> <li> SOLID principles </li> <li> Dagger, why use dependency injection, what if we do not think it is important, like alternatives? How to create our own dependency injection library. </li> <li> why use MVVM over MVP, think outside the box, we could have used observables using RxJava, etc. - open-ended questions around it </li> <li> Multi-Module benefits and why use it</li> <li> How to handle dependencies or abstraction in multi-module </li> <li> val vs const </li> <li> inline keyword </li> <li> lateinit vs lazy </li> </ul>|
 
+
+------
+
+## Android Roadmap 2024
+| Topics | Sub-Topics |
+|  --- | --- |
+| Programming Languages | <li>Kotlin</li><li>Java</li> |
+| Android Architecture | ![image](https://developer.android.com/static/guide/platform/images/android-stack_2x.png) |
+| Runtime | <li>Dalvik Virtual Machine</li><li>Android Runtime</li> |
+| Android Manifest | <li>Package</li><li>Application Id</li> |
+| Permissions | <li>Install-time Permissions</li> <li>Special Permissions</li> <li>Runtime Permissions</li><li>Permissions Groups</li>|
+| Android Build | <li>APK</li><li>AAB</li> |
+|Thread|<li>Processes</li><li>Threads</li><li>Inter Process Communication</li><li>Handlers</li><li>Loopers</li><li>Message Queue</li><li>UI Thread</li><li>Background Thread</li><li>Heap & Stack</li>|
+| Fundamental Components | <li>Activity</li><li>Services</li><li>Broadcast Receiver</li><li>Content Provider</li>|
+| Intent |<li>Implicit Intent</li><li>Explicit Intent</li><li>Intent Filters</li><li>Intent Flags</li>|
+|Activity|<li>Activity Lifecycle</li><li>Tasks and Back Stacks</li><li>Bundles</li><li>Parcelables</li><li>Recent Screens</li><li>App Shortcuts</li><li>Context</li>|
+|Services|<li>Service Lifecycle</li><li>Foreground Service</li><li>Background Service</li><li>Bound Service</li><li>AIDL</li><li>Job Scheduler</li><li>WorkManager</li>|
+|Broadcast Receiver|<li>Pub-Sub</li><li>System Broadcast</li><li>Permissions</li><li>Security</li>|
+|Content Provider|<li>Content Resolver</li><li>Cursor</li><li>MIME Types</li><li>Contracts</li>|
+|Data Storage|<li>App Specific Storage</li><li>Shared Storage</li><li>Preferences</li><li>Database</li><li>Scoped Storage</li><li>LRU Cache</li><li>SQLite</li><li>ROOM</li><li>Data Store</li>|
+|Fragments|<li>Fragment Lifecycle</li><li>Dialog Fragment</li><li>Fragment Transactions</li><li>Fragment Manager</li><li>View Lifecycle</li>|
+|Navigation Component |<li>Host</li><li>Graph</li><li>Controller</li><li>Back Stacks</li><li>Destinations</li><li>Deeplink</li>|
+|UI |<li>XML</li><li>Jetpack Compose</li>|
+|Jetpack Compose|<li>Composition</li><li>ReComposition</li><li>State Hoisting</li><li>Remember</li><li>RememberSaveable</li><li>Side Effects</li><li>LaunchedEffect</li><li>DisposableEffect</li><li>DerivedStateOf</li><li>SnapshotFlow</li><li>CompositionLocal</li><li>Theming</li><li>Modifier</li><li>Layouts</li><li>Box/Column/Row</li><li>Image</li><li>Coil</li><li>LazyColumn/LayRow</li><li>Text/Button/ other ui components</li>|
+|Testing|<li>UI Testing</li><li>Unit Testing</li><li>Espresso</li><li>Robolectric</li><li>Mockk</li>|
+|Debuggin|<li>Logcat</li><li>Timber</li><li>Break Points</li><li>Chucker</li><li>Charles</li><li>LeakCanary</li>|
+|Benchmark|<li>Micro Benchmark</li><li>Macro Benchmark</li>|
+|Static Analysis|<li>Ktlint</li><li>Detekt</li><li>Android Lint</li>|
+|GitHub Actions|<li>Pipeline</li><li>Build Generation</li><li>Workflow</li>|
+|Gradle|<li>Commands</li><li>Groovy</li>|
+|Common Errors|<li>ANR</li><li>App Crash</li><li>Fatal Error</li><li>OOM</li><li>ArrayOutOfBound</li>|
+|Proguard|<li>Obfuscation</li><li>Keep</li>|
+|Code Architecture|<li>MVP</li><li>MVVM</li><li>MVI</li><li>Modularization</li><li>Design Patterns</li><li>Network Layer</li><li>Data Layer</li><li>UI Layer</li><li>Domain/Repository/...</li>|
+|Firebase |<li>Crashlytics</li><li>Remote Config</li><li>A/B Testing</li>|
+|App Release|<li>App Release Process</li><li>App Distribution</li><li>Google Play Console</li><li>App Review/Ratings</li><li>App Size</li><li>App Policies</li>|
 
 ------
 

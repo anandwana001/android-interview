@@ -77,6 +77,8 @@
 - Difference between Coroutine and Java Thread
 - Why Coroutines are light weight?
 - How does Coroutine switch context?
+- When to use Kotlin sealed classes?
+- Suspending vs Blocking in Kotlin Coroutines
 
 ## Android
  - How does Garbage collection works?
@@ -99,6 +101,10 @@
  - Deeplink understanding and architecture
  - Notifications
  - Difference between Fragment Lifecycle Observer and View Lifecycle Observer.
+ - When should you use a Fragment rather than an Activity?
+ - Explain the Android push notification system.
+ - How LiveData is different from ObservableField?
+ - What is the difference between setValue and postValue in LiveData?
   
 ### Lifecycle
  - How to keep a video maintain a playing state when we rotate the screen?
@@ -397,6 +403,9 @@ this.lifecycleScope.launch {
 - Custom views in compose
 - Canvas in Compose
 - What are the benefits of Jetpack Compose?
+- How does Jetpack Compose integrate with existing Android frameworks and libraries?
+- What are the best practices for performance optimization in Jetpack Compose?
+- How is navigation handled in Jetpack Compose?
 
 
 ## Thread
@@ -412,6 +421,7 @@ this.lifecycleScope.launch {
  - Brief about Android Architecture.
  - MVP vs MVVM?
  - Is there any issue in the Presenter in the MVP?
+ - Clean Architecture
 
 
 ## System Design
@@ -424,11 +434,15 @@ this.lifecycleScope.launch {
  - Design Error handling Structure
  - REST <-> Web Sockets
  - Implement caching mechanism
+ - Build an offline-first app
+ - Design Analytics Library
+
 
 ## Libraries
  - How does Glide internally work?
  - How does retrofit work internally?
  - ViewModel internal working
+ - How will you choose between Dagger 2 and Dagger-Hilt?
 
 ## Common Question
  - `String` vs `StringBuilder`

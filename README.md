@@ -9,7 +9,8 @@
 ## Need a Mentor? [Click Here](https://topmate.io/anandwana001)
 
 ## Complete Android Engineer Roadmap
-* [Roadmap 2024](#android-roadmap-2024)
+* [Roadmap 2024 - Topics](#android-roadmap-2024)
+* [Roadmap 2024 - Week Schedule](https://www.linkedin.com/pulse/android-engineer-interview-prep-map-akshay-nandwana-owkbf/?trackingId=CDzA28GvQN604AVSCv2itA%3D%3D)
 
 
 

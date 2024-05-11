@@ -6,7 +6,7 @@
 ## Let's Learn for Free! [Click Here](https://www.youtube.com/@anandwana001)
 
 
-## Need a Mentor? [Click Here](https://topmate.io/anandwana001)
+## Book 1:1 Session here -> [Click Here](https://topmate.io/anandwana001)
 
 ## Complete Android Engineer Roadmap
 * [Roadmap 2024 - Topics](#android-roadmap-2024)
@@ -25,6 +25,7 @@
 * [Jetpack Compose](#jetpack-compose)
 * [Thread](#thread)
 * [Architecture](#architecture)
+* [Design Pattern](#design-pattern)
 * [System Design](#system-design)
 * [Libraries](#libraries)
 * [Common Question](#common-question)
@@ -80,6 +81,21 @@
 - How does Coroutine switch context?
 - When to use Kotlin sealed classes?
 - Suspending vs Blocking in Kotlin Coroutines
+- What are Dispatchers and Name all of them
+- On which thread Dispatchers .Default execute the task or use which thread?
+- Dispatchers .Default vs Dispatcher .IO
+- What is SupervisorScope?
+- Exception Handling in Coroutine
+- Map vs FlatMap in kotlin
+- Singleton Pattern in Kotlin with object keyword
+- Collections API in Kotlin
+- What is Unidirectional Flow
+- StateFlow vs SharedFlow
+- Builder Pattern in Kotlin
+- Higher Order Functions in Kotlin
+- Covariance in Kotlin
+- Delay vs Thread.sleep? [Answer](https://www.linkedin.com/posts/anandwana001_coding-datastructures-jetpackcompose-activity-7192723727661350912-cpp-?utm_source=share&utm_medium=member_desktop)
+
 
 ## Android
  - How does Garbage collection works?
@@ -106,6 +122,9 @@
  - Explain the Android push notification system.
  - How LiveData is different from ObservableField?
  - What is the difference between setValue and postValue in LiveData?
+ - What is process death?
+ - What is ViewModelScope and How does it work internally?
+
   
 ### Lifecycle
  - How to keep a video maintain a playing state when we rotate the screen?
@@ -125,7 +144,7 @@
  - What do `launchWhenCreated`, `launchWhenStarted`, and `launchWhenResumed` functions do?
  - Fragment Callbacks when moving from one fragment to another and coming back to prev one?
  - Does onCreateView get called after coming to a fragment from top fragment?
- - 
+ - When does ViewModel not survive
 
 
 #### Important Lifecycle Points to Remember
@@ -407,6 +426,7 @@ this.lifecycleScope.launch {
 - How does Jetpack Compose integrate with existing Android frameworks and libraries?
 - What are the best practices for performance optimization in Jetpack Compose?
 - How is navigation handled in Jetpack Compose?
+- What is Strong Skipping Mode? [Answer](https://www.linkedin.com/posts/anandwana001_coding-datastructures-jetpackcompose-activity-7193437801365823488-SlVT?utm_source=share&utm_medium=member_desktop)
 
 
 ## Thread
@@ -423,7 +443,24 @@ this.lifecycleScope.launch {
  - MVP vs MVVM?
  - Is there any issue in the Presenter in the MVP?
  - Clean Architecture
+ - MVVM vs MVI
+ - What is Clean Architecture in MVVM
+ - What are Provides and Binds in your Dagger library
 
+
+## Design Pattern
+ -  What is SOLID principle?
+ - What are different design patterns you know about?
+ - What is a creational pattern?
+ - What is a structural pattern?
+ - What is a behavioral pattern?
+ - Create Singleton Pattern without Kotlin default implementation
+ - Create Observer Pattern
+ - Create Adapter Pattern
+ - How to make a Singleton Pattern Thread Safe?
+ - What is Dependency Inversion
+ - Write a real-life example of Dependency Injection without using any library
+ - Explain how Android Architecture components (ViewModel, LiveData, etc.) utilize design patterns behind the scenes
 
 ## System Design
  - Design Image Loading Library

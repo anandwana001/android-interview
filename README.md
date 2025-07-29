@@ -1,12 +1,15 @@
-# Android Engineer Interview Questions
+# 🧠 Android Engineer Interview Questions
 
 ![Android](https://img.shields.io/badge/Android-3DDC84?style=for-the-badge&logo=android&logoColor=white)
 ![Kotlin](https://img.shields.io/badge/kotlin-%237F52FF.svg?style=for-the-badge&logo=kotlin&logoColor=white)
 
-## Let's Learn for Free! [Click Here](https://www.youtube.com/@anandwana001)
+
+_Your complete companion for mastering Android, Kotlin, Jetpack Compose & System Design interviews._
+
+Curated by [Akshay Nandwana](https://www.linkedin.com/in/anandwana001/)
 
 
-## Book 1:1 Session here -> [Click Here](https://topmate.io/anandwana001)
+## Book 1:1 Session here -> [Click Here](https://rzp.io/l/HVG4Zx4qFO)
 
 ## Complete Android Engineer Roadmap
 * [Roadmap 2024 - Topics](#android-roadmap-2024)

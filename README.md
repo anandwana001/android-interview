@@ -99,7 +99,6 @@ Curated by [Akshay Nandwana](https://www.linkedin.com/in/anandwana001/)
 - Covariance in Kotlin
 - Delay vs Thread.sleep? [Answer](https://www.linkedin.com/posts/anandwana001_coding-datastructures-jetpackcompose-activity-7192723727661350912-cpp-?utm_source=share&utm_medium=member_desktop)
 
-
 ## Android
  - How does Garbage collection works?
  - What is a dangling pointer?
@@ -538,6 +537,13 @@ this.lifecycleScope.launch {
 |Code Architecture|<li>MVP</li><li>MVVM</li><li>MVI</li><li>Modularization</li><li>Design Patterns</li><li>Network Layer</li><li>Data Layer</li><li>UI Layer</li><li>Domain/Repository/...</li>|
 |Firebase |<li>Crashlytics</li><li>Remote Config</li><li>A/B Testing</li>|
 |App Release|<li>App Release Process</li><li>App Distribution</li><li>Google Play Console</li><li>App Review/Ratings</li><li>App Size</li><li>App Policies</li>|
+
+
+------
+
+## Top 10 Kotlin Coroutines Interview Questions
+- Senior Android Engineer Guide
+
 
 
 ------

@@ -15,6 +15,8 @@ Curated by [Akshay Nandwana](https://www.linkedin.com/in/anandwana001/)
 * [Roadmap 2024 - Topics](#android-roadmap-2024)
 * [Roadmap 2024 - Week Schedule](https://www.linkedin.com/pulse/android-engineer-interview-prep-map-akshay-nandwana-owkbf/?trackingId=CDzA28GvQN604AVSCv2itA%3D%3D)
 
+## Detailed Question and Answers
+[Question and Answers](https://github.com/anandwana001/android-interview/blob/main/Detail%20Questions%20and%20Answers.md)
 
 
 ## Interview Contents

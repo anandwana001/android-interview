@@ -129,6 +129,86 @@ Curated by [Akshay Nandwana](https://www.linkedin.com/in/anandwana001/)
  - What is the difference between setValue and postValue in LiveData?
  - What is process death?
  - What is ViewModelScope and How does it work internally?
+   
+#### Question: What is the difference between `Intent` and `PendingIntent`?
+
+**Answer :**
+- `Intent` is used to start activities, services, or broadcast receivers immediately.
+- `PendingIntent` is a wrapper around an Intent that allows other applications to execute it with your app's permissions at a later time.
+- `PendingIntent` is commonly used with notifications, alarms, and widgets.
+
+#### Question: What are the different launch modes for Activities in Android?
+
+**Answer :**
+- `standard`: Creates a new instance every time (default behavior).
+- `singleTop`: Reuses existing instance if it's at the top of the stack.
+- `singleTask`: Only one instance exists in the task stack.
+- `singleInstance`: Only one instance exists globally across all applications.
+
+#### Question: What is the difference between `Service` and `IntentService`?
+
+**Answer :**
+- `Service` runs on the main thread and requires manual thread management for long operations.
+- `IntentService` automatically handles background thread execution and stops itself when work is done.
+- `IntentService` processes requests sequentially in a worker thread.
+- `IntentService` is now deprecated; use `JobIntentService` or `WorkManager` instead.
+
+#### Question: What is the difference between `ArrayList` and `LinkedList` in Android development?
+
+**Answer :**
+- `ArrayList` uses dynamic arrays, better for random access and iteration.
+- `LinkedList` uses doubly-linked list, better for frequent insertions/deletions.
+- `ArrayList` has O(1) access time, `LinkedList` has O(n) access time.
+- `ArrayList` is generally preferred in Android due to better memory locality.
+
+#### Question: What is `ViewBinding` and how is it different from `findViewById`?
+
+**Answer :**
+- `ViewBinding` generates binding classes for each XML layout file.
+- Provides null safety and type safety compared to `findViewById`.
+- Compile-time safety prevents runtime crashes from incorrect view IDs.
+- Better performance as it avoids reflection used by data binding.
+
+#### Question: What is the difference between `RecyclerView` and `ListView`?
+
+**Answer :**
+- `RecyclerView` enforces the ViewHolder pattern for better performance.
+- `RecyclerView` provides built-in animations and different layout managers.
+- `ListView` can cause memory issues without proper ViewHolder implementation.
+- `RecyclerView` is more flexible and efficient for large datasets.
+
+#### Question: What are Android Architecture Components?
+
+**Answer :**
+- Collection of libraries to help design robust, testable apps.
+- Includes: `ViewModel`, `LiveData`, `Room`, `Navigation`, `WorkManager`.
+- Handles lifecycle-aware components automatically.
+- Promotes separation of concerns and follows MVVM pattern.
+
+#### Question: What is the difference between `apply()` and `commit()` in SharedPreferences?
+
+**Answer :**
+- `apply()` is asynchronous and doesn't return a result.
+- `commit()` is synchronous and returns boolean indicating success.
+- `apply()` is faster and recommended for most use cases.
+- `commit()` should be used when you need to know if the operation succeeded.
+
+#### Question: What is `ProGuard` and `R8` in Android?
+
+**Answer :**
+- `ProGuard` is a code shrinking and obfuscation tool.
+- `R8` is the newer replacement for ProGuard with better performance.
+- Both reduce APK size by removing unused code and renaming classes.
+- `R8` is enabled by default in Android Gradle Plugin 3.4.0+.
+
+#### Question: What is the difference between `Gson` and `Moshi` for JSON parsing?
+
+**Answer :**
+- `Gson` uses reflection which can be slower and less safe.
+- `Moshi` generates adapters at compile-time for better performance.
+- `Moshi` has better Kotlin support with null safety.
+- `Moshi` is more modern and lightweight compared to Gson.
+
 
   
 ### Lifecycle

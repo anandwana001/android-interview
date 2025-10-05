@@ -437,8 +437,9 @@ this.lifecycleScope.launch {
   Use Case is to run a one-time suspend action when the composable first enters the composition, such as fetching initial data from a network or showing a `Snackbar`
   - SideEffect is used to execute a block of code after every successful recomposition. It's an escape hatch to share Compose state with non-Compose code.
   Use Case is to publish Compose state to non-Compose code, for example, updating an analytics library with the latest state value after every recomposition.
-  - `DisposableEffect` is similar to `LaunchedEffect` but provides a mandatory `onDispose` block for cleanup. The onDispose block is executed when the composable leaves the composition or when the `key` changes.
-  Use Case is to manage resources that require explicit cleanup, such as registering a `LifecycleObserver` and ensuring it's unregistered in the `onDispose` block to prevent memory leaks.
+  - DisposableEffect is used for non-suspending side effects that require an explicit cleanup (teardown) process.
+  Unlike LaunchedEffect, the main effect block of DisposableEffect runs synchronously during composition. This block executes whenever the composable enters the Composition or when its given key(s) change. Its primary function is to provide a mandatory onDispose block for cleanup.
+  Use Case: Its primary use case is for managing listeners or observers from the Android framework that are not Compose-aware. For instance, registering a LifecycleObserver or a BroadcastReceiver inside the effect block, and then unregistering it within the mandatory onDispose block to prevent memory leaks.
 
 
 ## Thread

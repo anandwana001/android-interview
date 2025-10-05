@@ -432,6 +432,14 @@ this.lifecycleScope.launch {
 - What are the best practices for performance optimization in Jetpack Compose?
 - How is navigation handled in Jetpack Compose?
 - What is Strong Skipping Mode? [Answer](https://www.linkedin.com/posts/anandwana001_coding-datastructures-jetpackcompose-activity-7193437801365823488-SlVT?utm_source=share&utm_medium=member_desktop)
+- Compare and contrast `LaunchedEffect`, `SideEffect`, and `DisposableEffect`. Provide a clear use case for each one.
+  - `LaunchedEffect` is used to run a suspend function (coroutine) safely from a composable. It launches when the composable first enters the composition and cancels when it leaves. It will relaunch if its `key` parameter changes.
+  Use Case is to run a one-time suspend action when the composable first enters the composition, such as fetching initial data from a network or showing a `Snackbar`
+  - SideEffect is used to execute a block of code after every successful recomposition. It's an escape hatch to share Compose state with non-Compose code.
+  Use Case is to publish Compose state to non-Compose code, for example, updating an analytics library with the latest state value after every recomposition.
+  - DisposableEffect is used for non-suspending side effects that require an explicit cleanup (teardown) process.
+  Unlike LaunchedEffect, the main effect block of DisposableEffect runs synchronously during composition. This block executes whenever the composable enters the Composition or when its given key(s) change. Its primary function is to provide a mandatory onDispose block for cleanup.
+  Use Case: Its primary use case is for managing listeners or observers from the Android framework that are not Compose-aware. For instance, registering a LifecycleObserver or a BroadcastReceiver inside the effect block, and then unregistering it within the mandatory onDispose block to prevent memory leaks.
 
 
 ## Thread

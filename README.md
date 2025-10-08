@@ -47,6 +47,11 @@ Curated by [Akshay Nandwana](https://www.linkedin.com/in/anandwana001/)
     -     const val BASE_URL = "https://github.com"
           val githubHandle = "anandwana001"
           val repoName: String
+- **What is the difference between `lazy` and `lateinit`?**
+    - `lazy` is used with `val` (Immutable) and `lateinit` is used with `var` (Mutable)
+    - `lazy` is initialized at the time of first access, while `lateinit` is initialized after object creation
+    - `lazy` can be used with primitive data types such as Int, Float, Double etc., whereas `lateinit` cannot be used with primitive data types
+    - `lazy` is thread-safe by default, while `lateinit` is not thread-safe
 - **What is so interesting about `data class`?**
    - Uses to hold data
    - Pre-functions like `toString`, `equals`, `copy`, and `componentN`
